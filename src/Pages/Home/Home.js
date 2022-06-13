@@ -1,9 +1,18 @@
 import React from 'react';
+import Header from './Header';
+import HomeCatagory from './HomeCatagory';
+import HomeCourse from './HomeCourse';
+import LatestBlogs from './LatestBlogs';
+import Whyus from './Whyus';
 
 const Home = () => {
     return (
-        <div>
-            <p>This is Home!!!</p>
+        <div className='md:px-14 lg:px-24'>
+            <Header></Header>
+            <HomeCatagory></HomeCatagory>
+            <HomeCourse></HomeCourse>
+            <Whyus></Whyus>
+            <LatestBlogs></LatestBlogs>
         </div>
     );
 };
