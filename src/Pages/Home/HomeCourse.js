@@ -134,6 +134,7 @@ const HomeCourse = () => {
 
 
             </div>
+            <button className=' bg-[#515FCE] block mx-auto px-8 py-3 mt-8 rounded text-white'>সকল কোর্স</button>
         </div>
     );
 };

@@ -2,8 +2,7 @@ import React from 'react';
 import { FaStar } from "react-icons/fa";
 const Feedback = () => {
     return (
-        <div className='px-6 md:px-14 lg:px-24 mt-24'>
-
+        <div className='lg:max-w-7xl md-w-full  mx-auto px-4  md:px-16 mt-24'>
             <div className='lg:flex lg:justify-between md:gap-6'>
 
                 <div className='lg:w-[450px] md:w-[400px] bg-[#B3EAFF] rounded-md lg:p-6 md:p-4 p-3'>
