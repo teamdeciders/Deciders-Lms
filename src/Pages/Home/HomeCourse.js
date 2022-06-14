@@ -3,7 +3,7 @@ import { GrStar } from 'react-icons/gr'
 const HomeCourse = () => {
     return (
         <div className='lg:max-w-7xl md-w-full  mx-auto px-4  md:px-16 mt-6'>
-            <div className='flex flex-wrap gap-6 justify-center items-center'>
+            <div className='flex flex-wrap gap-6 lg:gap-12 justify-center items-center'>
                 {/* <div className='grid md:grid-cols-3 lg:grid-cols-3 gap-6 justify-center items-center'> */}
                 {/* Card Start --------------------------------- */}
                 <div className='rounded-md shadow p-2 bg-[#F6F7FD] h-[500px] w-full max-w-xs'>

@@ -3,7 +3,7 @@ import { FaUserAlt } from "react-icons/fa";
 const Whyus = () => {
   return (
     <div>
-      <div className="px-6 md:px-14 lg:px-24 mt-16 mb-12">
+      <div className='lg:max-w-7xl md-w-full  mx-auto px-4  md:px-16 mt-6'>
         <h2 className="text-2xl md:text-4xl lg:text-4xl text-center font-bold">
           কেন <span className=" text-[#CEC051]">ABC</span> থেকে কোর্স টি করবেন
         </h2>
