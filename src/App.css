@@ -8,6 +8,48 @@
 }
 
 
+.buttonmodal{
+  background: none; 
+  border: 1px solid #F5C32C; 
+  text-transform: uppercase; 
+  padding: 8px 15px ; 
+  min-width: 100px; 
+  margin: 10px; 
+  cursor: pointer; 
+  transition: color 0.4s linear;
+  position: relative;
+
+}
+.buttonmodal:hover{
+  color: #fff;
+
+}
+.buttonmodal::before{
+  content:''; 
+  position: absolute; 
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #F5C32C;
+  z-index: -1;
+  transition: transform 0.5s; 
+  transform-origin: 0 0;
+
+}
+.btn1:hover::before{
+  transform: scaleX(1);
+}
+.btn1::before{
+  transform: scaleX(0);
+}
+
+.btn2:hover::before{
+  transform: scaleX(1);
+}
+.btn2::before{
+  transform: scaleY(0);
+}
 
 
 
