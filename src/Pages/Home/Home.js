@@ -1,4 +1,5 @@
 import React from 'react';
+import Feedback from './Feedback';
 import Header from './Header';
 import HomeCatagory from './HomeCatagory';
 import HomeCourse from './HomeCourse';
@@ -7,11 +8,12 @@ import Whyus from './Whyus';
 
 const Home = () => {
     return (
-        <div className='md:px-14 lg:px-24'>
+        <div className=''>
             <Header></Header>
             <HomeCatagory></HomeCatagory>
             <HomeCourse></HomeCourse>
             <Whyus></Whyus>
+            <Feedback></Feedback>
             <LatestBlogs></LatestBlogs>
         </div>
     );
