@@ -34,67 +34,39 @@ const HomeCatagory = () => {
                         <BsArrowLeftCircleFill
                             className="w-full h-full block text-[#CEC051]" />
                     </div>
-                    <div className="flex w-full overflow-x-scroll   homecatagory " id="mainscroll">
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>1</h3>
+                    <div className=" flex gap-x-2  overflow-x-scroll   homecatagory " id="mainscroll">
+                        <div className='px-4 py-2 h-[40px] w-auto    hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
+                            <h3>UI/UX</h3>
                         </div>
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>2</h3>
+                        <div className='px-4 py-2  h-[40px] w-auto    hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
+                            <h3>Graphic's Design</h3>
                         </div>
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>3</h3>
+                        <div className='px-4 py-2  h-[40px] w-auto        hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
+                            <h3>Web Design</h3>
                         </div>
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>UX/UI</h3>
+                        <div className='px-4 py-2  h-[40px] w-auto        hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
+                            <h3>Web Development</h3>
                         </div>
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>UX/UI</h3>
+                        <div className='px-4 py-2  h-[40px] w-auto        hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
+                            <h3>Personal Skill's</h3>
                         </div>
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>UX/UI</h3>
+                        <div className='px-4 py-2  h-[40px] w-auto        hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
+                            <h3>Health & Fitness</h3>
                         </div>
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>UX/UI</h3>
+                        <div className='px-4 py-2  h-[40px] w-auto        hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
+                            <h3>Accounting</h3>
                         </div>
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>UX/UI</h3>
+                        <div className='px-4 py-2  h-[40px] w-auto        hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
+                            <h3>Freelancing</h3>
                         </div>
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>UX/UI</h3>
+                        <div className='px-4 py-2  h-[40px] w-auto        hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
+                            <h3>Free Courses</h3>
                         </div>
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>UX/UI</h3>
+                        <div className='px-4 py-2  h-[40px] w-auto        hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
+                            <h3>Animale</h3>
                         </div>
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>UX/UI</h3>
-                        </div>
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>UX/UI</h3>
-                        </div>
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>UX/UI</h3>
-                        </div>
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>UX/UI</h3>
-                        </div>
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>UX/UI</h3>
-                        </div>
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>UX/UI</h3>
-                        </div>
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>UX/UI</h3>
-                        </div>
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>UX/UI</h3>
-                        </div>
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>UX/UI</h3>
-                        </div>
-                        <div className='px-4 py-2 inline-block mx-2 hover:bg-[#B3EAFF] hover:font-bold rounded-md bg-transparent border boder-[#41CCFF]'>
-                            <h3>UX/UI</h3>
-                        </div>
+
+
 
                         <div>
 
