@@ -1,9 +1,11 @@
 import React from 'react';
-
+import HomeCatagory from '../Home/HomeCatagory'
 const Courses = () => {
     return (
         <div>
-            <p>This is Courses!!!</p>
+            {/* 1) Header------------- */}
+            {/* 2) Home Catagory Component Here */}
+            <HomeCatagory />
         </div>
     );
 };

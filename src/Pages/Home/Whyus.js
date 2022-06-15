@@ -5,7 +5,7 @@ const Whyus = () => {
     <div>
       <div className='lg:max-w-7xl md-w-full mt-24  mx-auto px-4  md:px-16 '>
         <h2 className="text-2xl md:text-4xl lg:text-4xl text-center font-bold">
-          কেন <span className=" text-[#CEC051]">ABC</span> থেকে কোর্স টি করবেন
+          কেন <span className=" text-[#CEC051]">Decicers Lms</span> থেকে কোর্স টি করবেন
         </h2>
         <p className="text-center w-full lg:w-[702px] mx-auto mt-5">
           মুক্ত কৌশলগত থিম এলাকার মাধ্যমে বৈপ্লবিক উদ্ভাবনকে স্বতন্ত্রভাবে
