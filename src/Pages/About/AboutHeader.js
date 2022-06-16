@@ -7,7 +7,7 @@ const AboutHeader = () => {
 
                 <div className='lg:flex lg:justify-around lg:items-center md:flex md:justify-center md:items-center'>
                     <div>
-                        <h1 className='text-4xl font-bold'>Decicers Lms সম্পর্কে।</h1>
+                        <h1 className='text-4xl font-bold'>About Us</h1>
                     </div>
                     <div className='mt-8'>
                         <img src={aboutheaderimage} alt="" />

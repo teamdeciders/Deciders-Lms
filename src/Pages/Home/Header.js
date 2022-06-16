@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -9,13 +10,14 @@ const Header = () => {
 
                     <div className='md:w-2/4   md:text-left flex items-center'>
                         <div>
-                            <h1 className='text-2xl md:text-3xl lg:text-5xl font-bold'>সেরা <span className='lg:text-5xl text-[#CEC051] font-bold'>ই-লার্নিং</span> প্ল্যাটফর্ম </h1>
-                            <h1 className='text-2xl md:text-3xl mt-1 lg:text-5xl font-bold'>  বাংলাদেশে</h1>
+                            <h1 className='text-2xl md:text-3xl lg:text-5xl font-bold'>Best <span className='lg:text-5xl text-[#CEC051] font-bold'>E-learning</span> Platform</h1>
+                            <h1 className='text-2xl md:text-3xl mt-1 lg:text-5xl font-bold'> in Bangladesh</h1>
                             <p className='mt-4'>
                             Individually redefine revolutionary innovation through open strategic theme areas. Phosphorescently e-enables high-performance testing methods instead of highly-skilled architectures.
                             </p>
-                            <button className=' bg-[#515FCE] px-8 py-3 mt-8 rounded text-white'>শুরু করি</button>
+                            <Link to={'courses'} className=' bg-[#515FCE] block max-w-max  px-8 py-3  rounded text-white mt-6'>Get Started</Link>
                         </div>
+
                     </div>
 
                     <div className=' md:w-2/4 w-full  justify-center items-center'>
