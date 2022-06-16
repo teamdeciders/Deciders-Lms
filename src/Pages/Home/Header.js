@@ -12,9 +12,7 @@ const Header = () => {
                             <h1 className='text-2xl md:text-3xl lg:text-5xl font-bold'>সেরা <span className='lg:text-5xl text-[#CEC051] font-bold'>ই-লার্নিং</span> প্ল্যাটফর্ম </h1>
                             <h1 className='text-2xl md:text-3xl mt-1 lg:text-5xl font-bold'>  বাংলাদেশে</h1>
                             <p className='mt-4'>
-                                মুক্ত কৌশলগত থিম এলাকার মাধ্যমে বৈপ্লবিক উদ্ভাবনকে স্বতন্ত্রভাবে পুনরায় সংজ্ঞায়িত
-                                করুন।উচ্চ-দক্ষ আর্কিটেকচারের পরিবর্তে উচ্চ-প্রদান পরীক্ষার পদ্ধতিগুলিকে
-                                ফসফ্লুরোসেন্টলি ই-সক্ষম করে।
+                            Individually redefine revolutionary innovation through open strategic theme areas. Phosphorescently e-enables high-performance testing methods instead of highly-skilled architectures.
                             </p>
                             <button className=' bg-[#515FCE] px-8 py-3 mt-8 rounded text-white'>শুরু করি</button>
                         </div>
