@@ -2,6 +2,7 @@ import React from 'react';
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
 import { GrStar } from 'react-icons/gr';
 import { GoSearch } from 'react-icons/go';
+import { Link } from 'react-router-dom';
 
 
 const Courses = () => {
@@ -142,7 +143,7 @@ const Courses = () => {
 
 
                             <div class="relative">
-                                <button type="submit" class="absolute top-0 right-0 p-2.5 text-sm font-medium bg-white shadow-lg rounded-r-lg border  focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                <button type="submit" class="absolute top-0 right-0 p-2.5 text-sm font-medium bg-white shadow-lg rounded-r-lg border">
                                     <GoSearch className='h-5 w-5 ' />
                                 </button>
                                 <input className='block p-2.5 w-full z-20 text-sm bg-white border shadow-sm rounded-md  required' type="search" name="" id="" />
@@ -175,7 +176,7 @@ const Courses = () => {
                                     <h2 className='text-sm font-bold text-blue-600'>ওয়েব ডেবেলপার</h2>
                                 </div>
                                 <div className='flex items-center'>
-                                    <button className='bg-[#B3EAFF] px-2 py-2 rounded-md font-bold hover:bg-[#515FCE] hover:text-white'>Buy Now</button>
+                                    <Link to='/course/1'><button  className='bg-[#B3EAFF] px-2 py-2 rounded-md font-bold hover:bg-[#515FCE] hover:text-white'>Buy Now</button></Link>
                                 </div>
 
                             </div>
