@@ -7,7 +7,7 @@ import { MdOutlinePlayLesson } from 'react-icons/md'
 import { BiBarChartAlt2 } from 'react-icons/bi'
 import { Link, Outlet, useParams } from 'react-router-dom';
 const SingleCourse = () => {
-    let{ params} = useParams()
+    let { params } = useParams()
     let { id } = useParams()
     console.log(id, params);
     return (
@@ -108,19 +108,19 @@ const SingleCourse = () => {
             </div>
 
             <div className="w-full">
-                <div className='lg:max-w-7xl md-w-full  mt-8 mx-auto px-4  md:px-16  '>
-                    <div className="w-full p-2 mt-4 grid grid-cols-4 gap-1 text-center">
+                <div className='lg:max-w-7xl md-w-full  mt-8 mx-auto px-2   md:px-16  '>
+                    <div className="w-full mt-4 grid grid-cols-4 gap-1 text-center">
 
-                        <Link to={''} className='p-2 font-bold rounded-md bg-[#D9F5FF]  hover:bg-[#515FCE] hover:text-white'>
+                        <Link to={''} className='p-2 font-bold min-w-max rounded-md bg-[#D9F5FF]  hover:bg-[#515FCE] hover:text-white'>
                             Overview
                         </Link>
-                        <Link to={'curriculum'} className='p-2 font-bold rounded-md bg-[#D9F5FF]  hover:bg-[#515FCE] hover:text-white'>
+                        <Link to={'curriculum'} className='p-2 font-bold min-w-max rounded-md bg-[#D9F5FF]  hover:bg-[#515FCE] hover:text-white'>
                             Curriculum
                         </Link>
-                        <Link to={'instractor'} className='p-2 font-bold rounded-md bg-[#D9F5FF]  hover:bg-[#515FCE] hover:text-white'>
+                        <Link to={'instractor'} className='p-2 font-bold min-w-max rounded-md bg-[#D9F5FF]  hover:bg-[#515FCE] hover:text-white'>
                             Instructor
                         </Link>
-                        <Link to={'review'} className='p-2 font-bold rounded-md bg-[#D9F5FF]  hover:bg-[#515FCE] hover:text-white'>
+                        <Link to={'review'} className='p-2 font-bold min-w-max rounded-md bg-[#D9F5FF]  hover:bg-[#515FCE] hover:text-white'>
                             Reviews
                         </Link>
                     </div>
