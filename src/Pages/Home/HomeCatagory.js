@@ -23,7 +23,7 @@ const HomeCatagory = () => {
     return (
         <div className='lg:max-w-7xl md-w-full  mx-auto px-4  md:px-16 '>
             <div>
-                <h1 className='md:text-4xl text-2xl font-bold my-2 mb-4'>বৈশিষ্ট্য কোর্স</h1>
+                <h1 className='md:text-3xl text-2xl font-bold my-2 mb-4'>Course Catagory</h1>
 
                 <div className="flex ">
                     <div onClick={leftscroll} className="h-[35px] w-[35px]">

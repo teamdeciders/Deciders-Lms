@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -9,15 +10,16 @@ const Header = () => {
 
                     <div className='md:w-2/4   md:text-left flex items-center'>
                         <div>
-                            <h1 className='text-2xl md:text-3xl lg:text-5xl font-bold'>সেরা <span className='lg:text-5xl text-[#CEC051] font-bold'>ই-লার্নিং</span> প্ল্যাটফর্ম </h1>
-                            <h1 className='text-2xl md:text-3xl mt-1 lg:text-5xl font-bold'>  বাংলাদেশে</h1>
+                            <h1 className='text-2xl md:text-3xl lg:text-5xl font-bold'>Best <span className='lg:text-5xl text-[#CEC051] font-bold'>E-learning</span> Platform</h1>
+                            <h1 className='text-2xl md:text-3xl mt-1 lg:text-5xl font-bold'> in Bangladesh</h1>
                             <p className='mt-4'>
                                 মুক্ত কৌশলগত থিম এলাকার মাধ্যমে বৈপ্লবিক উদ্ভাবনকে স্বতন্ত্রভাবে পুনরায় সংজ্ঞায়িত
                                 করুন।উচ্চ-দক্ষ আর্কিটেকচারের পরিবর্তে উচ্চ-প্রদান পরীক্ষার পদ্ধতিগুলিকে
                                 ফসফ্লুরোসেন্টলি ই-সক্ষম করে।
                             </p>
-                            <button className=' bg-[#515FCE] px-8 py-3 mt-8 rounded text-white'>শুরু করি</button>
+                            <Link to={'courses'} className=' bg-[#515FCE] block max-w-max  px-8 py-3  rounded text-white mt-6'>Get Started</Link>
                         </div>
+
                     </div>
 
                     <div className=' md:w-2/4 w-full  justify-center items-center'>
