@@ -14,7 +14,7 @@ const Navbar = () => {
                     <div className='md:flex items-center justify-between border-b'>
                         <div className='font-bold text-2xl cursor-pointer flex items-start 
       text-gray-800'>
-                            <Link to={'/'} > <img className='md:w-28 w-16' src="https://i.ibb.co/XzzNm65/Educational-Service-Logo-1364695.png" alt="" /></Link>
+                            <Link to={'/'} > <img className='md:w-28 w-16 h-[60px]' src="https://i.ibb.co/XzzNm65/Educational-Service-Logo-1364695.png" alt="" /></Link>
                         </div>
 
                         <div onClick={() => setOpen(!open)} className='text-3xl absolute right-2 top-4 cursor-pointer md:hidden'>
