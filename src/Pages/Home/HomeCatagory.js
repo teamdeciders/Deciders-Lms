@@ -4,10 +4,6 @@ import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
 import './HomeCatagory.css'
 
 
-
-
-
-
 const HomeCatagory = () => {
 
 

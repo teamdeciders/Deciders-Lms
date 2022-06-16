@@ -9,7 +9,7 @@ const Navbar = () => {
 
     return (
         <div className='bg-[#FDFCF6]'>
-            <nav className='md:px-24 px-4 lg:max-w-7xl  md-w-full mx-auto  sticky top-0 z-10 mb-2'>
+            <nav className='md:px-24 px-4 lg:max-w-7xl  md-w-full mx-auto  sticky top-0 z-10 '>
                 <div className='w-full sticky'>
                     <div className='md:flex items-center justify-between border-b'>
                         <div className='font-bold text-2xl cursor-pointer flex items-start 
