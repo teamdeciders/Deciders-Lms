@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import aboutheaderimage from '../../Assets/aboutheaderimage.png';
+import { AiFillCloseCircle } from 'react-icons/ai';
+import aboutheaderimage from '../../Assets/aboutheaderimage.png'
 import card from '../../Assets/card1.png'
-import { AiFillCloseCircle } from 'react-icons/ai'
-
-const CheckoutPages = () => {
+const CheckoutPage = () => {
 
     const [count, setCount] = useState(1)
 
@@ -19,12 +18,10 @@ const CheckoutPages = () => {
             return setCount(count - 1)
         }
     }
-
     return (
-        <section>
-
-            {/* Checkout Banner */}
-            <div className='bg-[#FDFCF6]'>
+        <div>
+              {/* Checkout Banner */}
+              <div className='bg-[#FDFCF6] '>
                 <div className='px-6 md:px-14 lg:max-w-7xl md-w-full mx-auto min-h-[60vh] h-auto'>
 
                     <div className='lg:flex lg:justify-around lg:items-center md:flex md:justify-center md:items-center'>
@@ -58,6 +55,7 @@ const CheckoutPages = () => {
                         </div>
                     </div>
                 </div>
+                
 
                 <div className='bg-[#979FE2] p-5 rounded grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative my-2'>
                     <img className='rounded w-80' src={card} alt="" />
@@ -76,8 +74,8 @@ const CheckoutPages = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 
-export default CheckoutPages;
+export default CheckoutPage;

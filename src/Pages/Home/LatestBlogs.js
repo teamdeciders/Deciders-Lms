@@ -17,8 +17,9 @@ const LatestBlogs = () => {
                         <div className='border border-[#CEC051]'></div>
                         <p>20-Comment</p>
                     </div>
-                    <p className='mx-3 font-semibold text-xl'>গবেষণার জন্য সর্বশেষ মাইক্রো জৈবিক </p>
-                    <p className='mx-3 font-semibold text-xl'>মৌলিক কর্মশালা</p>
+                    <p className='mx-3 font-semibold text-xl'>The latest microbiology for research
+ </p>
+                    <p className='mx-3 font-semibold text-xl'>Basic workshop</p>
                     <button className='buttonmodal btn1 mx-3 mt-4 mb-4'>Reed Now</button>
                 </div>
                 <div className='border shadow rounded max-w-sm w-full'>
@@ -30,8 +31,8 @@ const LatestBlogs = () => {
                         <div className='border border-[#CEC051]'></div>
                         <p>20-Comment</p>
                     </div>
-                    <p className='mx-3 font-semibold text-xl'>গবেষণার জন্য সর্বশেষ মাইক্রো জৈবিক </p>
-                    <p className='mx-3 font-semibold text-xl'>মৌলিক কর্মশালা</p>
+                    <p className='mx-3 font-semibold text-xl'>The latest microbiology for research </p>
+                    <p className='mx-3 font-semibold text-xl'>Basic workshop</p>
                     <button className='buttonmodal btn1 mx-3 mt-4 mb-4'>Reed Now</button>
                 </div>
                 <div className='border shadow rounded max-w-sm w-full'>
@@ -43,8 +44,8 @@ const LatestBlogs = () => {
                         <div className='border border-[#CEC051]'></div>
                         <p>20-Comment</p>
                     </div>
-                    <p className='mx-3 font-semibold text-xl'>গবেষণার জন্য সর্বশেষ মাইক্রো জৈবিক </p>
-                    <p className='mx-3 font-semibold text-xl'>মৌলিক কর্মশালা</p>
+                    <p className='mx-3 font-semibold text-xl'>The latest microbiology for research </p>
+                    <p className='mx-3 font-semibold text-xl'>Basic workshop</p>
                     <button className='buttonmodal btn1 mx-3 mt-4 mb-4'>Reed Now</button>
                 </div>
 

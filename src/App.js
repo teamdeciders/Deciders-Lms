@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
 import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
 import About from './Pages/About/About';
@@ -7,6 +8,9 @@ import Blog from './Pages/Blog/Blog';
 import ContactUs from './Pages/ContactUs/ContactUs';
 import Courses from './Pages/Courses/Courses';
 import Home from './Pages/Home/Home';
+import Login from './Pages/Login/Login';
+import NotfoundPage from './Pages/NotfoundPage/NotfoundPage';
+import SignUp from './Pages/SignUp/SignUp';
 import Curriculum from './Pages/SingleCourse/Curriculum';
 import Instructor from './Pages/SingleCourse/Instructor';
 import Overview from './Pages/SingleCourse/Overview';
@@ -23,6 +27,11 @@ function App() {
         <Route path={'/courses'} element={<Courses />}></Route>
         <Route path={'/blog'} element={<Blog/>}></Route>
         <Route path={'/contact'} element={<ContactUs/>}></Route>
+        <Route path={'/checkout'} element={<CheckoutPage/>}></Route>
+        <Route path={'/login'} element={<Login/>}></Route>
+        <Route path={'/singup'} element={<SignUp/>}></Route>
+
+        <Route path={'*'} element={<NotfoundPage/>}></Route>
         <Route path={'course/:id'} element={<SingleCourse />}>
 
           <Route index path='' element={<Overview />}></Route>
@@ -31,6 +40,7 @@ function App() {
           <Route path='review' element={<Review />}></Route>
         </Route>
       </Routes>
+     
       <Footer></Footer>
     </div>
   );

@@ -14,8 +14,8 @@ const Feedback = () => {
                                     alt='' />
                             </div>
                             <div className='ml-4'>
-                                <h1 className='text-xl font-bold text-black'>কামরুল হক</h1>
-                                <p>গ্রাফিক ডিজাইনার</p>
+                                <h1 className='text-xl font-bold text-black'>Kamrul Haque</h1>
+                                <p>Graphic designer</p>
                             </div>
                         </div>
 
@@ -28,16 +28,18 @@ const Feedback = () => {
                         </div>
 
                     </div>
-                    <p className='ml-6 mt-4 mb-3'>মুক্ত কৌশলগত থিম এলাকার মাধ্যমে বৈপ্লবিক উদ্ভাবনকে স্বতন্ত্রভাবে
-                        পুনরায় সংজ্ঞায়িত করুন।উচ্চ-দক্ষ আর্কিটেকচারের পরিবর্তে উচ্চ-প্রদান
-                        পরীক্ষার পদ্ধতিগুলিকে ফসফ্লুরোসেন্টলি ই-সক্ষম করে।</p>
+                    <p className='ml-6 mt-4 mb-3'>
+                    Individually redefine revolutionary innovation through open strategic theme areas. 
+                    Phosphorescently e-enables high-performance testing methods instead of highly-skilled architectures
+                        </p>
                 </div>
 
                 <div className='lg:w-2/4 md:w-2/4 w-full mt-2'>
-                    <h1 className='lg:text-3xl md:text-2xl text-2xl'>আমাদের স্টুডেন্ট ফিডব্যাক</h1>
-                    <p className='mt-6'>মুক্ত কৌশলগত থিম এলাকার মাধ্যমে বৈপ্লবিক উদ্ভাবনকে স্বতন্ত্রভাবে
-                        পুনরায় সংজ্ঞায়িত করুন।উচ্চ-দক্ষ আর্কিটেকচারের পরিবর্তে উচ্চ-প্রদান
-                        পরীক্ষার পদ্ধতিগুলিকে ফসফ্লুরোসেন্টলি ই-সক্ষম করে।</p>
+                    <h1 className='lg:text-3xl md:text-2xl text-2xl'>Our student feedback</h1>
+                    <p className='mt-6'>
+                    Individually redefine revolutionary innovation through open strategic theme areas. Phosphorescently e-enables high-performance 
+                    testing methods instead of highly-skilled architectures
+                        </p>
                 </div>
 
             </div>

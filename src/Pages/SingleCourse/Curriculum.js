@@ -70,8 +70,8 @@ const Curriculum = () => {
             </div>
             {
                 data.map((d) => {
-                    const { id, moduleName, lessons } = d;
-                    return <Accordion key={id} {...d }  ></Accordion>
+                    const { id} = d;
+                    return <Accordion key={id} {...d} ></Accordion>
                 })
             }
         </div>
