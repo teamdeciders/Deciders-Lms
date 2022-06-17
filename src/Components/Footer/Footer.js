@@ -15,7 +15,7 @@ const Footer = () => {
                             ই-সক্ষম করে।</p>
                     </div>
                     <div className='pb-3 pt-3 text-gray-100'>
-                        <h1 className='text-xl font-bold text-black lg:mb-2 md:mb-1'>আমাদের একাডেমি</h1>
+                        <h1 className='text-xl font-bold text-black lg:mb-2 md:mb-1'>Our academy</h1>
                         <p>About Us</p>
                         <p>Services</p>
                         <p>Features & Staff</p>
@@ -23,14 +23,14 @@ const Footer = () => {
                         <p>Latest News</p>
                     </div>
                     <div className='pb-3 text-gray-100 '>
-                        <h1 className='text-xl font-bold text-black lg:mb-2 md:mb-1'>সাপোর্ট</h1>
+                        <h1 className='text-xl font-bold text-black lg:mb-2 md:mb-1'>Support</h1>
                         <p>FAQ’s </p>
                         <p>Features & Staff</p>
                         <p>Contact</p>
                         <p>24/7 Days</p>
                     </div>
                     <div className='lg:mr-10 text-gray-100'>
-                        <h1 className='text-xl font-bold text-black lg:mb-2 md:mb-1'>রিসোর্স</h1>
+                        <h1 className='text-xl font-bold text-black lg:mb-2 md:mb-1'>Resources</h1>
                         <p> Customers’s  </p>
                         <p>Whitepaper</p>
                         <p>Dev API</p>
