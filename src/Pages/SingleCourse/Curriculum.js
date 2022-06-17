@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Accordion from './Accordion';
 
 const Curriculum = () => {
-
+    const [expand, setExpand] = useState(false)
 
     const data = [
         {
@@ -60,10 +60,18 @@ const Curriculum = () => {
 
     return (
         <div className='p-2 h-[80vh] overflow-y-scroll homecatagory '>
+            <div className='flex justify-between items-center my-3'>
+
+                <h2 className='font-bold'>কমপ্লিট ফ্রন্ট-এন্ড ডেভেলপমেন্ট শিখুন (জাভাস্ক্রিপ্ট)</h2>
+                <p onClick={() => setExpand(!expand)} className='font-bold cursor-pointer select-none text-blue-500 underline'>{expand ? 'Collapse All' : 'Expand All'}</p>
+
+
+
+            </div>
             {
                 data.map((d) => {
                     const { id, moduleName, lessons } = d;
-                    return <Accordion key={id} {...d} ></Accordion>
+                    return <Accordion key={id} {...d }  ></Accordion>
                 })
             }
         </div>

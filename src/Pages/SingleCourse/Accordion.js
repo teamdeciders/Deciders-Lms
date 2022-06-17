@@ -7,7 +7,7 @@ const Accordion = ({ id, moduleName, lessons }) => {
         <div className='p-2 shadow my-3 relative '>
             <div className='md:w-3/4 w-5/6'>
                 {/* Module Name */}
-                <h1 className='md:text-xl font-bold text-gray- 500' > {moduleName}</h1>
+                <h1 className='md:text-xl  text-gray- 500' > {moduleName}</h1>
             </div>
             <div onClick={() => { setActive(!active) }} className='absolute  w-10 h-10 rounded-full shadow-md top-0 right-2 flex justify-center items-center'>
                 {
