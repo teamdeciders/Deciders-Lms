@@ -37,6 +37,7 @@ const CheckoutPage = () => {
             </div>
 
             <div className='bg-[#F6F7FD] px-5 md:px-24 py-16'>
+            <div className='px-6 md:px-14 lg:max-w-7xl md-w-full mx-auto min-h-[60vh] h-auto'>
                 <p className='text-[#515FCE] font-semibold md:my-8'>আপনার ফাইলে 2 টি কোর্স যোগ করেছেন।</p>
 
                 <div className='bg-[#979FE2] p-5 rounded grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative my-2'>
@@ -73,6 +74,7 @@ const CheckoutPage = () => {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     );
