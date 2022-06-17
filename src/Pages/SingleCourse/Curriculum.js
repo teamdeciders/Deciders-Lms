@@ -62,7 +62,7 @@ const Curriculum = () => {
         <div className='p-2 h-[80vh] overflow-y-scroll homecatagory '>
             {
                 data.map((d) => {
-                    const { id, moduleName, lessons } = d;
+                    const { id} = d;
                     return <Accordion key={id} {...d} ></Accordion>
                 })
             }

@@ -5,7 +5,6 @@ import Feedback from '../Home/Feedback';
 import AboutDetails from './AboutDetails';
 import AboutHeader from './AboutHeader';
 import AboutHero from './AboutHero';
-import CheckoutPages from './CheckoutPages';
 import OurTeachers from './OurTeachers';
 
 const About = () => {
@@ -17,7 +16,6 @@ const About = () => {
             <OurTeachers />
             <Feedback />
             {/* extra  */}
-             <CheckoutPages></CheckoutPages>
              <MyCourses></MyCourses>
              <MyCart></MyCart>
 

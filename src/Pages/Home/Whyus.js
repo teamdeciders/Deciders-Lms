@@ -18,10 +18,9 @@ const Whyus = () => {
               <FaUserAlt className="text-[#CEC051]" />
             </div>
             <div>
-              <h2 className="text-xl font-bold">বিশেষজ্ঞ এবং পেশাদার মেন্টর</h2>
+              <h2 className="text-xl font-bold">Expert and professional mentor</h2>
               <p className="mt-3 px-5 ">
-                মার্কেটে অভিজ্ঞ এবং পেশাদার একজনমেন্টর দ্বারা প্রতিটি কোর্স তৈরি
-                করা হয়েছে।
+              Each course is created by an experienced and professional marketer in the market.
               </p>
             </div>
           </div>
@@ -31,10 +30,10 @@ const Whyus = () => {
               <FaUserAlt className="text-[#CEC051]" />
             </div>
             <div>
-              <h2 className="text-xl font-bold">দক্ষতা উন্নয়ন</h2>
+              <h2 className="text-xl font-bold">Skill development</h2>
               <p className="mt-3 px-5 ">
                 {" "}
-                প্রতিটি কোর্সে একটি শেল্ফ এবং ক্যারিয়ার বিকাশের সুযোগ রয়েছে।
+                Each course has a shelf and career development opportunities.
               </p>
             </div>
           </div>
@@ -44,11 +43,10 @@ const Whyus = () => {
               <FaUserAlt className="text-[#CEC051]" />
             </div>
             <div>
-              <h2 className="text-xl font-bold">আপডেট কোর্স মডিউল </h2>
+              <h2 className="text-xl font-bold">Update course module </h2>
               <p className="mt-3 px-5 ">
                 {" "}
-                আন্তর্জাতিক কোর্স কারিকুলাম অনুসরণ করা প্রতিটি কোর্স তৈরি করা
-                হয়েছে।
+                Create each course following the International Course Curriculum
               </p>
             </div>
           </div>
