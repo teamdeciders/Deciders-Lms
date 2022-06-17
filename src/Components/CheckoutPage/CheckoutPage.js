@@ -42,7 +42,7 @@ const CheckoutPage = () => {
                 <div className='bg-[#979FE2] p-5 rounded grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative my-2'>
                     <img className='rounded w-80' src={card} alt="" />
                     <div>
-                    <AiFillCloseCircle className='absolute top-0 right-0 md:top-2 md:right-3  text-white text-lg'/>
+                        <AiFillCloseCircle className='absolute top-0 right-0 md:top-2 md:right-3  text-white text-lg' />
                         <div className='text-2xl text-white font-medium'>ফাইন্যান্স এবং ইনভেস্টমেন্ট সিরিজ:</div>
                         <div className='text-white font-medium'>গ্রাফিক্স ডিজাইন</div>
                         <div className='text-white font-medium text-xl mt-10 md:mt-28'>৳ ২৫০০</div>
@@ -60,7 +60,7 @@ const CheckoutPage = () => {
                 <div className='bg-[#979FE2] p-5 rounded grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative my-2'>
                     <img className='rounded w-80' src={card} alt="" />
                     <div>
-                    <AiFillCloseCircle className='absolute top-0 right-0 md:top-2 md:right-3 text-white text-lg'/>
+                        <AiFillCloseCircle className='absolute top-0 right-0 md:top-2 md:right-3 text-white text-lg' />
                         <div className='text-2xl text-white font-medium'>ফাইন্যান্স এবং ইনভেস্টমেন্ট সিরিজ:</div>
                         <div className='text-white font-medium'>গ্রাফিক্স ডিজাইন</div>
                         <div className='text-white font-medium text-xl mt-10 md:mt-28'>৳ ২৫০০</div>
