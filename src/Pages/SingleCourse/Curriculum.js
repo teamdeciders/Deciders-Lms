@@ -3,8 +3,7 @@ import React from 'react';
 const Curriculum = () => {
     return (
         <div>
-            Curriculum
-            
+            Curriculu
         </div>
     );
 };
