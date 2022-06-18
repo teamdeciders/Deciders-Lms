@@ -8,9 +8,11 @@ const Whyus = () => {
           কেন <span className=" text-[#CEC051]">Decicers Lms</span> থেকে কোর্স টি করবেন
         </h2>
         <p className="text-center w-full lg:w-[702px] mx-auto mt-5">
-          মুক্ত কৌশলগত থিম এলাকার মাধ্যমে বৈপ্লবিক উদ্ভাবনকে স্বতন্ত্রভাবে
-          পুনরায় সংজ্ঞায়িত করুন।উচ্চ-দক্ষ আর্কিটেকচারের পরিবর্তে উচ্চ-প্রদান
-          পরীক্ষার পদ্ধতিগুলিকে ফসফ্লুরোসেন্টলি ই-সক্ষম করে।
+          Consider your interests. Think about your interests. ...
+          Discuss your career goals. Discuss your career aspirations, and talk about how the course aligns with your career goals. ...
+          Highlight your strengths. ...
+          Focus on positive reasons. ...
+          Be enthusiastic.
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 mt-14 mx-auto">
           <div className="rounded-xl p-2 bg-[#D9F5FF] h-[293px] w-full max-w-md mx-auto text-center">
@@ -20,7 +22,7 @@ const Whyus = () => {
             <div>
               <h2 className="text-xl font-bold">Expert and professional mentor</h2>
               <p className="mt-3 px-5 ">
-              Each course is created by an experienced and professional marketer in the market.
+                Each course is created by an experienced and professional marketer in the market.
               </p>
             </div>
           </div>
@@ -56,11 +58,10 @@ const Whyus = () => {
               <FaUserAlt className="text-[#CEC051]" />
             </div>
             <div>
-              <h2 className="text-xl font-bold">সার্টিফিকেশন</h2>
+              <h2 className="text-xl font-bold">Certification</h2>
               <p className="mt-3 px-5 ">
                 {" "}
-                প্রতিটি কোর্স শেষে একটি সার্টিফিকেট আছে। অনলাইন পোর্টফোলিওতে
-                সার্টিফিকেট......
+                There is a certificate at the end of each course. Certificates in the online portfolio
               </p>
             </div>
           </div>

@@ -73,7 +73,32 @@ const CheckoutPage = () => {
                         </div>
                     </div>
                 </div>
+
+                <div className='md:w-2/4 w-full  mt-12'>
+                    <h1 className='text-3xl font-bold mb-8'>বিস্তারিত :</h1>
+                     <div className='flex justify-between'>
+                        <p>মোট কোর্স</p>
+                        <p> ৪ টি</p>
+                     </div>
+                      <div className='flex justify-between mt-5 mb-2'>
+                        <p>কোর্স মূল্য</p>
+                        <p> 10,000 টাকা</p>
+                     </div>
+                      <hr />
+                      <div className='flex justify-between mt-3'>
+                        <p>মোট মূল্য</p>
+                        <p> 10,000 টাকা</p>
+                     </div>
+                     <button className=' bg-[#515FCE] block max-w-max  px-8 py-3  rounded text-white mt-6'>Buy Course</button>
+
+                 </div>
+
             </div>
+
+
+            
+
+
         </div>
     );
 };
