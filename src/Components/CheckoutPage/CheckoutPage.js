@@ -99,8 +99,9 @@ const CheckoutPage = () => {
 
             
 
-
         </div>
+        </div>
+
     );
 };
 
