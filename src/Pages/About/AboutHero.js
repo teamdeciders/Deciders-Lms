@@ -10,10 +10,8 @@ const AboutHero = () => {
                 </div>
 
                 <div className='lg:w-2/4 md:3/4 md:gap-6 w-full mt-2'>
-                    <h1 className='lg:text-3xl md:text-2xl text-xl font-semibold mb-4'>আপনি <span className='text-[#CEC051]'>A</span><span className='text-[#515FCE]'>B</span><span className='text-[#CEC051]'>C</span> এর সাথে যোগ দিতে
-                        পারেন এবং আপনার উজ্জ্বল
-                        ভবিষ্যতের জন্য আপনার দক্ষতা
-                        আপগ্রেড করতে পারেন।
+                    <h1 className='lg:text-3xl md:text-2xl text-xl font-semibold mb-4'>
+                    You can join <span className='text-[#CEC051]'>A</span><span className='text-[#515FCE]'>B</span><span className='text-[#CEC051]'>C</span> and upgrade your skills for your bright future.
                     </h1>
 
                     <p className='text-gray-700'>মুক্ত কৌশলগpinstত থিম এলাকার মাধ্যমে বৈপ্লবিক উদ্ভাবনকে স্বতন্ত্রভাবে

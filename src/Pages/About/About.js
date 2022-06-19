@@ -1,4 +1,5 @@
 import React from 'react';
+import CheckoutPage from '../../Components/CheckoutPage/CheckoutPage';
 import MyCourses from '../../Dashboard/AdminDashboard/MyCourses';
 import MyCart from '../../Dashboard/StudentDashboard/MyCart';
 import Feedback from '../Home/Feedback';
@@ -18,7 +19,6 @@ const About = () => {
             {/* extra  */}
              <MyCourses></MyCourses>
              <MyCart></MyCart>
-
 
         </div>
     );
