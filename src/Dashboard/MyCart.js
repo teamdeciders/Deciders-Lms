@@ -1,6 +1,6 @@
 import React from "react";
 import { AiFillCloseCircle } from 'react-icons/ai';
-import card from '../../Assets/card1.png';
+import card from '../Assets/card1.png';
 
 const MyCart = () => {
   return (
