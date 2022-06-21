@@ -3,6 +3,11 @@ import './App.css';
 import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
 import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
+import Dashboard from './Dashboard/Dashboard';
+import DashboardHome from './Dashboard/DashboardHome';
+import MyCart from './Dashboard/MyCart';
+import MyCourse from './Dashboard/MyCourse';
+import MyProfile from './Dashboard/MyProfile';
 import About from './Pages/About/About';
 import Blog from './Pages/Blog/Blog';
 import ContactUs from './Pages/ContactUs/ContactUs';
@@ -39,6 +44,17 @@ function App() {
           <Route path='instractor' element={<Instructor />}></Route>
           <Route path='review' element={<Review />}></Route>
         </Route>
+
+        <Route path={'dashboard'} element={<Dashboard/>}>
+          {/* for all user */}
+        <Route index path='' element={<DashboardHome />}></Route>
+        <Route  path='myprofile' element={<MyProfile />}></Route>
+        <Route  path='mycourse' element={<MyCourse />}></Route>
+         {/* only Student */}
+        <Route  path='mycart' element={<MyCart />}></Route>
+         
+        </Route>
+
       </Routes>
      
       <Footer></Footer>

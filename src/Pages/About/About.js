@@ -1,7 +1,4 @@
 import React from 'react';
-import CheckoutPage from '../../Components/CheckoutPage/CheckoutPage';
-import MyCourses from '../../Dashboard/AdminDashboard/MyCourses';
-import MyCart from '../../Dashboard/StudentDashboard/MyCart';
 import Feedback from '../Home/Feedback';
 import AboutDetails from './AboutDetails';
 import AboutHeader from './AboutHeader';
@@ -16,9 +13,7 @@ const About = () => {
             <AboutDetails />
             <OurTeachers />
             <Feedback />
-            {/* extra  */}
-             <MyCourses></MyCourses>
-             <MyCart></MyCart>
+           
 
         </div>
     );
