@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
+import { RiNotification2Fill } from 'react-icons/ri'
 
 const DashboardHome = () => {
 
@@ -13,7 +14,41 @@ const DashboardHome = () => {
                 <div className='bg-[#FC8B06] cs-round h-4 rounded-md absulate top-0 '></div>
                 <div className="p-2">
                     <h3 className='font-bold'>Hot Offers</h3>
-
+                    <div className="flex justify-center items-center flex-col md:px-5 py-3 space-y-2">
+                        <div className='w-full flex p-3 rounded-md border shadow'>
+                            <div className='w-[20%] text-end'>
+                                <div className='flex justify-center items-center'>
+                                    <RiNotification2Fill className='text-4xl text-[#F37A50]' />
+                                </div>
+                            </div>
+                            <div className='w-[70%]'>
+                                <div>সুখবর ! আমাদের প্রতিটি কোর্সে...</div>
+                                <div>10 min ago</div>
+                            </div>
+                        </div>
+                        <div className='w-full flex p-3 rounded-md border shadow'>
+                            <div className='w-[20%] text-end'>
+                                <div className='flex justify-center items-center'>
+                                    <RiNotification2Fill className='text-4xl text-[#F37A50]' />
+                                </div>
+                            </div>
+                            <div className='w-[70%]'>
+                                <div>ঈদ উপলক্ষে ১০% ছাড় ! বিস্তারিত...</div>
+                                <div>1 days ago</div>
+                            </div>
+                        </div>
+                        <div className='w-full flex p-3 rounded-md border shadow'>
+                            <div className='w-[20%] text-end'>
+                                <div className='flex justify-center items-center'>
+                                    <RiNotification2Fill className='text-4xl text-[#F37A50]' />
+                                </div>
+                            </div>
+                            <div className='w-[70%]'>
+                                <div>সুখবর ! আমাদের প্রতিটি কোর্সে...</div>
+                                <div> 2 days ago</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
