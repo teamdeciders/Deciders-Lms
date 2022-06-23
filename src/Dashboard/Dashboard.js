@@ -12,7 +12,7 @@ const Dashboard = () => {
     <div className=''>
       <div className='  bg-[#FDFCF6] w-full '>
         <div className='lg:max-w-7xl md-w-full  mx-auto px-4  md:px-12 '>
-          <div className=" mx-auto w-[375px] py-8">
+          <div className=" mx-auto md:w-[375px] py-8">
             <div className="w-[100px] h-[100px] rounded-full mx-auto bg-blue-50 border-2 border-black overflow-hidden ">
               <img className='w-full h-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwejmeEUc09aMbmR3vgKj9udJaNn9imJO0uPD1ksSgNUyL2Vu1-2rj3CYk493Ku0BPGbY&usqp=CAU" alt="" />
             </div>
