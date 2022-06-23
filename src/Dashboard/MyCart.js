@@ -53,9 +53,7 @@ const MyCart = () => {
     }, 2000);
 
   }
-  function playAudio(url) {
-    new Audio(url).play();
-  }
+
   return (
     <div >
       {/* card */}

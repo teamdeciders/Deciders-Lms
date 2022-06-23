@@ -20,11 +20,15 @@ const MyCourse = () => {
             teacher: 'Shourob & Abdullah',
             img: 'https://bohubrihi.com/wp-content/uploads/2022/04/Android-App-Development-Career-Track-Bohubrihi-620x440.png'
         }
+        
 
     ]
     return (
         <div >
             {/* card */}
+            <div className=' mx-auto h-6 my-4 max-w-max px-3 rounded-full bg-blue-600 flex justify-center text-white font-bold'>
+        {mycourses.length} Courses
+      </div>
             {
                 mycourses.map(data => <div className="md:w-[60%] cs-card-shadow rounded-lg p-2  mx-auto mb-8 ">
                     <div className="md:flex gap-2">
