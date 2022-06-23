@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Outlet, useParams } from 'react-router-dom';
-import { AiOutlineHome, AiOutlineShoppingCart ,AiOutlineLogout} from 'react-icons/ai'
+import { AiOutlineHome, AiOutlineShoppingCart, AiOutlineLogout } from 'react-icons/ai'
 import { BiUserCircle } from 'react-icons/bi'
 import { MdOutlineHistoryEdu } from 'react-icons/md'
 import CustomLink from './CustomLink';
@@ -48,9 +48,9 @@ const Dashboard = () => {
             <CustomLink className="hover:bg-[#FC8B06]" to={'myprofile'}><BiUserCircle className='inline-block text-xl' />My Profile</CustomLink>
             <CustomLink className="hover:bg-[#FC8B06]" to={'mycourse'}><MdOutlineHistoryEdu className='inline-block text-xl' />My Courses</CustomLink>
             <CustomLink className="hover:bg-[#FC8B06]" to={'mycart'}> <AiOutlineShoppingCart className='inline-block text-xl' /> My Cart</CustomLink>
-           
+
           </div>
-          <div className='md:w-[80%] rounded-sm  shadow-md p-2'>
+          <div className='md:w-[80%] md:h-[80vh] rounded-sm  shadow-md p-2 overflow-y-scroll homecatagory'>
             {/* Out let Here */}
 
             <Outlet />
