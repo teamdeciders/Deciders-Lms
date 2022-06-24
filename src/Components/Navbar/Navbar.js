@@ -3,10 +3,20 @@ import { Link } from 'react-router-dom'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { GrClose } from 'react-icons/gr'
 import { BsCartCheck } from 'react-icons/bs';
+import auth from '../../Firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { signOut } from 'firebase/auth';
 
 const Navbar = () => {
 
     const [open, setOpen] = useState(false)
+
+    // singout
+    const [user]= useAuthState(auth)
+    const handleSingOut=()=>{
+       signOut(auth)
+    }
+
 
     return (
         <div className='bg-[#FDFCF6]'>
@@ -47,9 +57,13 @@ const Navbar = () => {
                                     <BsCartCheck></BsCartCheck>
                                 </Link>
                             </li>
-                            <li className='md:ml-8 text-2xl md:my-0 my-7'>
-                                <Link to={'/login'} className='hover:text-[#1826a8] duration-500 border-2 rounded border-[#6776e6] text-[#6776e6] px-8'>Login</Link>
-                            </li>
+
+                            {user? <li className='md:ml-8 text-xl md:my-0 my-7'><button onClick={handleSingOut}  className='hover:text-[#1826a8] duration-500 border-2 rounded border-[#6776e6] text-[#6776e6] px-8 py-2'>Singout</button></li> :
+                             <li className='md:ml-8 text-2xl md:my-0 my-7'>
+                             <Link to={'/login'} className='hover:text-[#1826a8] duration-500 border-2 rounded border-[#6776e6] text-[#6776e6] px-8'>Login</Link>
+                         </li>
+                            }
+                           
                         </ul>
                     </div>
                 </div>
