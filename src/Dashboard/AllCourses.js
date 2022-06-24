@@ -5,6 +5,9 @@ const AllCourses = () => {
     return (
 
         <div>
+            <div className='border-b-2 mb-4'>
+                <h1 className='text-2xl font-bold text-center'>All Courses</h1>
+            </div>
             <div className=" overflow-x-auto rounded-sm">
                 <table className="w-full text-sm text-left">
                     <thead className="text-white bg-[#2366B5]">

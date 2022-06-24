@@ -24,16 +24,30 @@ code {
 .cs-border-shadow {
   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
+
 .homecatagory::-webkit-scrollbar {
   background-color: transparent;
 
 }
-.cs-round{
+
+.cs-round {
   border-radius: 11px 11px 0px 0px;
 }
-.cs-card-shadow{
+
+.cs-card-shadow {
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
-.csm-shadow:hover{
+
+.csm-shadow:hover {
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
+
+.in-bord {
+  border: 1px solid #E0CFCF;
+
+}
+
+.in-bord:focus {
+  outline: none;
+}
+

@@ -10,8 +10,8 @@ const MyProfile = () => {
             <div className='border mt-2'></div>
             <div className='flex justify-center items-center md:space-x-28 my-5 flex-col md:flex-row'>
                 <div className='space-y-4'>
-                    <div className='w-40 mt-2'>
-                        <img className='rounded-full w-full ring-2' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwejmeEUc09aMbmR3vgKj9udJaNn9imJO0uPD1ksSgNUyL2Vu1-2rj3CYk493Ku0BPGbY&usqp=CAU" alt="" />
+                    <div className='w-32 h-32 mt-2'>
+                        <img className='rounded-full w-full h-full ring-2' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwejmeEUc09aMbmR3vgKj9udJaNn9imJO0uPD1ksSgNUyL2Vu1-2rj3CYk493Ku0BPGbY&usqp=CAU" alt="" />
                     </div>
                     <div className='text-center'>
                         <button className='py-2 bg-[#FC8B06] w-full rounded text-white font-bold'>Edit</button>
