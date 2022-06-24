@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useRef, } from 'react';
+import JoditEditor from "jodit-react";
 import { ImCross } from 'react-icons/im'
 const AddCourses = () => {
     const [moduleInput, setModuleInput] = useState(false)
@@ -9,6 +10,9 @@ const AddCourses = () => {
     const addLessons = () => {
         setLessons(!moduleInput)
     }
+    const editor = useRef(null)
+    const [content, setContent] = useState('')
+    console.log(content);
     return (
         <div>
             <div className='border-b-2 border-slate-100 mb-4'>
@@ -17,8 +21,14 @@ const AddCourses = () => {
             <div className='p-2'>
 
                 <input className='w-full h-11 pl-3 rounded-md in-bord mb-3' type="text" placeholder='Add Title' />
-                <textarea className='w-full  p-2 rounded-md in-bord h-96 mb-3' type="text" placeholder='Add Title' />
-                <div className="md:flex gap-4">
+                <JoditEditor
+                    ref={editor}
+                    value={content}
+                    tabIndex={1}
+                    onBlur={newContent => setContent(newContent)}
+                    onChange={newContent => { }}
+                />
+                <div className="md:flex gap-4 mt-4">
                     <input className='w-full h-11 pl-3 rounded-md in-bord mb-3' type="text" placeholder='Duration in day' />
                     <input className='w-full h-11 pl-3 rounded-md in-bord mb-3' type="text" placeholder='Students' />
 
