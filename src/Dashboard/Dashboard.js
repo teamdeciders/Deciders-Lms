@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, Outlet, useParams } from 'react-router-dom';
-import { AiOutlineHome, AiOutlineShoppingCart, AiOutlineLogout } from 'react-icons/ai'
+import { AiOutlineHome, AiOutlineShoppingCart, AiOutlineLogout, AiOutlineFileText } from 'react-icons/ai'
 import { BiUserCircle } from 'react-icons/bi'
-import { BsWallet2 } from 'react-icons/bs'
+import { BsFillFileEarmarkTextFill, BsWallet2 } from 'react-icons/bs'
 import { MdOutlineHistoryEdu } from 'react-icons/md'
 import CustomLink from './CustomLink';
 const Dashboard = () => {
@@ -50,6 +50,12 @@ const Dashboard = () => {
             <CustomLink className="hover:bg-[#FC8B06]" to={'mycourse'}><MdOutlineHistoryEdu className='inline-block text-xl' />My Courses</CustomLink>
             <CustomLink className="hover:bg-[#FC8B06]" to={'mycart'}> <AiOutlineShoppingCart className='inline-block text-xl' /> My Cart</CustomLink>
             <CustomLink className="hover:bg-[#FC8B06]" to={'mywallet'}> <BsWallet2 className='inline-block text-xl' /> Wallet</CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'allcourses'}> <AiOutlineFileText className='inline-block text-xl' /> All Courses</CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'alllessons'}> <BsFillFileEarmarkTextFill className='inline-block text-xl' /> All Lessons</CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'addcourses'}> <BsFillFileEarmarkTextFill className='inline-block text-xl' /> Add Courses</CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'addlessons'}> <BsFillFileEarmarkTextFill className='inline-block text-xl' /> Add Lessons</CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'allteachers'}> <BsFillFileEarmarkTextFill className='inline-block text-xl' /> All Teachers</CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'allstudents'}> <BsFillFileEarmarkTextFill className='inline-block text-xl' /> All Students</CustomLink>
 
           </div>
           <div className='md:w-[80%] md:h-[80vh] rounded-sm  shadow-md p-2 overflow-y-scroll homecatagory'>

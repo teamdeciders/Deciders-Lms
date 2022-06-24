@@ -1,33 +1,37 @@
 import { Link } from 'react-router-dom';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase.init';
-import { useRef } from 'react';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import Swal from 'sweetalert2'
+
 
 const ResetPassword = () => {
 
     //handle reset password
     const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
-    const emailRef = useRef('')
 
-
-
-
-    const resetPassword = async () => {
-        const email = emailRef.current.value
-        if (email) {
-            await sendPasswordResetEmail(email)
-            alert('Sent email');
-        }
-        else {
-            alert('Please enter your email')
-        }
-    }
 
     const handleSubmit = async event => {
         event.preventDefault()
-        const email = emailRef.current.value
-        await signInWithEmailAndPassword(email)
+        const email = event.target.email.value
+
+        if (email) {
+            await sendPasswordResetEmail(email)
+            Swal.fire({
+                position: 'top-center',
+                icon: 'success',
+                title: 'Email sent please check',
+                showConfirmButton: false,
+                timer: 1000
+            })
+        }
+        else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please enter your email',
+
+            })
+        }
 
     }
 
@@ -45,9 +49,9 @@ const ResetPassword = () => {
             <form onSubmit={handleSubmit}>
                 <label className='' htmlFor="">Plese provide your Email</label>
                 <br />
-                <input type="email" ref={emailRef} className="md:w-2/4 mt-1 px-3 py-2 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 w-full rounded-md sm:text-sm focus:ring-1" placeholder="Email" />
+                <input type="email" name='email' className="md:w-2/4 mt-1 px-3 py-2 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 w-full rounded-md sm:text-sm focus:ring-1" placeholder="Email" />
                 <p />
-                <button onClick={resetPassword} className='bg-[#1890ff] py-2 px-3 rounded-sm mt-6  mb-6 text-white'>Sent password reset email</button>
+                <button className='bg-[#1890ff] py-2 px-3 rounded-sm mt-6  mb-6 text-white'>Sent password reset email</button>
             </form>
 
             <Link to='/login' className=' text-[#1890ff]'>Back to Login</Link>
