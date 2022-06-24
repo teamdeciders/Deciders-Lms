@@ -1,4 +1,6 @@
 import React from 'react';
+import { BiPhoneCall } from 'react-icons/bi';
+import { AiOutlineMail } from 'react-icons/ai';
 
 const Teach = () => {
     return (
@@ -23,6 +25,48 @@ const Teach = () => {
                         <img className='md:w-3/4  mx-auto block' src="https://rightedgelearning.com/wp-content/uploads/2021/11/single-man-main.png" alt="" />
                     </div>
 
+                </div>
+            </div>
+
+            <div className='lg:max-w-7xl w-full  mx-auto px-4  md:px-16 mt-16'>
+                <div className='grid grid-cols-1 md:grid-cols-3 md:gap-x-10 gap-y-8'>
+                    <div className='md:h-1/2 border p-5 shadow-lg rounded-md bg-[#0B2519] text-white'>
+                        <h1 className='text-3xl font-semibold text-center'>Need Any Help?</h1>
+                        <div className='mt-8'>
+                            <div className='flex gap-x-5 items-center'>
+                                <div className='w-14 h-14 border border-blue-300 rounded-full flex justify-center items-center'>
+                                    <BiPhoneCall className='text-white p-1 text-4xl' />
+                                </div>
+                                <div>
+                                    <h3 className='text-xl font-bold'>+77-00-222-1111</h3>
+                                </div>
+                            </div>
+
+                            <div className='flex gap-x-5 items-center mt-5'>
+                                <div className='w-14 h-14 border border-blue-300 rounded-full flex justify-center items-center'>
+                                    < AiOutlineMail className='text-white p-1 text-4xl' />
+                                </div>
+                                <div>
+                                    <h3 className='text-xl font-bold'>example@email.com</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='col-span-2 border p-7 rounded-lg shadow-lg'>
+                        <h1 className='text-3xl font-semibold mb-12'>Instructor form Submission</h1>
+                        <div>
+                            <form>
+                                <div className='grid grid-cols-1 gap-7'>
+                                    <input type="text" name="name" className="mt-1 px-3 py-2 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 w-full rounded-md sm:text-sm focus:ring-1" placeholder="Name" />
+                                    <input type="email" name="email" className="mt-1 px-3 py-2 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 w-full rounded-md sm:text-sm focus:ring-1" placeholder="Email" />
+                                    <input type="number" name="phone" className="mt-1 px-3 py-2 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 w-full rounded-md sm:text-sm focus:ring-1" placeholder="Phone" />
+                                    <input type="text" name="website" className="mt-1 px-3 py-2 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 w-full rounded-md sm:text-sm focus:ring-1" placeholder="LinkdIne Link" />
+                                    <input type="text" name="website" className="mt-1 px-3 py-2 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 w-full rounded-md sm:text-sm focus:ring-1" placeholder="Area of Expertise" />
+                                </div>
+                                <input className='bg-[#515FCE] p-2 rounded-md text-white mt-9 cursor-pointer' type="submit" value="Submit Now" />
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
