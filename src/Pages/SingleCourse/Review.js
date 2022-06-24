@@ -2,7 +2,7 @@ import React from 'react';
 
 const Review = () => {
     return (
-        <div className='h-[80vh] overflow-y-scroll review'>
+        <div className='p-2'>
             <div className='grid md:grid-cols-2 gap-5 rounded-md'>
                 <div className='shadow p-4 '>
                     <div className='flex gap-4'>
