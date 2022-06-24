@@ -3,6 +3,12 @@ import './App.css';
 import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
 import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
+import AddCourses from './Dashboard/AddCourses';
+import AddLessons from './Dashboard/AddLessons';
+import AllCourses from './Dashboard/AllCourses';
+import AllLessons from './Dashboard/AllLessons';
+import AllStudents from './Dashboard/AllStudents';
+import AllTeachers from './Dashboard/AllTeachers';
 import Dashboard from './Dashboard/Dashboard';
 import DashboardHome from './Dashboard/DashboardHome';
 import MyCart from './Dashboard/MyCart';
@@ -24,7 +30,7 @@ import Instructor from './Pages/SingleCourse/Instructor';
 import Overview from './Pages/SingleCourse/Overview';
 import Review from './Pages/SingleCourse/Review';
 import SingleCourse from './Pages/SingleCourse/SingleCourse';
-
+import Teach from './Pages/Teach/Teach';
 function App() {
   return (
     <div>
@@ -34,6 +40,7 @@ function App() {
         <Route path={'/about'} element={<About />}></Route>
         <Route path={'/courses'} element={<Courses />}></Route>
         <Route path={'/blog'} element={<Blog />}></Route>
+        <Route path={'/teach'} element={<Teach />}></Route>
         <Route path={'/contact'} element={<RequireAuth><ContactUs /></RequireAuth>}></Route>
         <Route path={'/checkout'} element={<CheckoutPage />}></Route>
         <Route path={'/login'} element={<Login />}></Route>
@@ -60,6 +67,14 @@ function App() {
 
           {/* Only teacher */}
           <Route path='mywallet' element={<Wallet />}></Route>
+
+          {/* only admin */}
+          <Route path='allcourses' element={<AllCourses />}></Route>
+          <Route path='alllessons' element={<AllLessons />}></Route>
+          <Route path='addcourses' element={<AddCourses />}></Route>
+          <Route path='addlessons' element={<AddLessons />}></Route>
+          <Route path='allteachers' element={<AllTeachers />}></Route>
+          <Route path='allstudents' element={<AllStudents />}></Route>
 
         </Route>
 
