@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link, Outlet, useParams } from 'react-router-dom';
-import { AiOutlineHome, AiOutlineShoppingCart, AiOutlineLogout } from 'react-icons/ai'
-import { BiUserCircle } from 'react-icons/bi'
-import { BsWallet2 } from 'react-icons/bs'
+import { AiOutlineHome, AiOutlineShoppingCart, AiOutlineLogout, AiOutlineFileAdd, AiOutlineFileText } from 'react-icons/ai'
+import { BiUserCircle, BiBookBookmark, BiBookAdd } from 'react-icons/bi'
+import { BsFillFileEarmarkTextFill, BsWallet2 } from 'react-icons/bs'
 import { MdOutlineHistoryEdu } from 'react-icons/md'
+import { FaUsers, FaChalkboardTeacher } from 'react-icons/fa'
 import CustomLink from './CustomLink';
 const Dashboard = () => {
   let name = 'Kamruzzaman Mayed'
@@ -42,7 +43,7 @@ const Dashboard = () => {
       </div>
       <div className="w-full mt-8">
         <div className='lg:max-w-7xl md-w-full  mx-auto md:flex gap-2'>
-          <div className='md:w-[20%]  min-h-max rounded-sm shadow-md p-2'>
+          <div className='md:w-[20%] md:max-h-[80vh] h-full rounded-sm shadow-md p-2'>
 
 
             <CustomLink className="hover:bg-[#FC8B06]  " to={''}><AiOutlineHome className='inline-block text-xl' /> Home</CustomLink>
@@ -50,8 +51,15 @@ const Dashboard = () => {
             <CustomLink className="hover:bg-[#FC8B06]" to={'mycourse'}><MdOutlineHistoryEdu className='inline-block text-xl' />My Courses</CustomLink>
             <CustomLink className="hover:bg-[#FC8B06]" to={'mycart'}> <AiOutlineShoppingCart className='inline-block text-xl' /> My Cart</CustomLink>
             <CustomLink className="hover:bg-[#FC8B06]" to={'mywallet'}> <BsWallet2 className='inline-block text-xl' /> Wallet</CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'allcourses'}> <AiOutlineFileText className='inline-block text-xl' /> All Courses</CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'alllessons'}> <BiBookBookmark className='inline-block text-xl' /> All Lessons</CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'addcourses'}> <AiOutlineFileAdd className='inline-block text-xl' /> Add Course</CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'addlessons'}> <BiBookAdd className='inline-block text-xl' /> Add Lessons</CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'allteachers'}> <FaChalkboardTeacher className='inline-block text-xl' /> All Teachers</CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'allstudents'}> <FaUsers className='inline-block text-xl' /> All Students</CustomLink>
+
           </div>
-          <div className='md:w-[80%] md:h-[80vh] rounded-sm  shadow-md p-2 overflow-y-scroll homecatagory'>
+          <div className='md:w-[80%] rounded-sm  shadow-md p-2 '>
             {/* Out let Here */}
             <Outlet />
           </div>
