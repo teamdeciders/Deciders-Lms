@@ -50,11 +50,9 @@ const Dashboard = () => {
             <CustomLink className="hover:bg-[#FC8B06]" to={'mycourse'}><MdOutlineHistoryEdu className='inline-block text-xl' />My Courses</CustomLink>
             <CustomLink className="hover:bg-[#FC8B06]" to={'mycart'}> <AiOutlineShoppingCart className='inline-block text-xl' /> My Cart</CustomLink>
             <CustomLink className="hover:bg-[#FC8B06]" to={'mywallet'}> <BsWallet2 className='inline-block text-xl' /> Wallet</CustomLink>
-
           </div>
           <div className='md:w-[80%] md:h-[80vh] rounded-sm  shadow-md p-2 overflow-y-scroll homecatagory'>
             {/* Out let Here */}
-
             <Outlet />
           </div>
 
