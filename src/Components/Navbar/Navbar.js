@@ -42,11 +42,11 @@ const Navbar = () => {
                             <li className='md:ml-8 text-xl md:my-0 my-7'>
                                 <Link to={'/about'} className='text-gray-800 hover:text-gray-400 duration-500'>About</Link>
                             </li>
-                            <li clapmyssName='md:ml-8 text-xl md:my-0 my-7'>
+                            <li className='md:ml-8 text-xl md:my-0 my-7'>
                                 <Link to={'/courses'} className='text-gray-800 hover:text-gray-400 duration-500'>Courses</Link>
                             </li>
                             <li className='md:ml-8 text-xl md:my-0 my-7'>
-                                <Link to={'/blog'} className='text-gray-800 hover:text-gray-400 duration-500'>Teach</Link>
+                                <Link to={'/blog'} className='text-gray-800 hover:text-gray-400 duration-500'>Blogs</Link>
                                 
                             </li>
                             <li className='md:ml-8 text-xl md:my-0 my-7'>
