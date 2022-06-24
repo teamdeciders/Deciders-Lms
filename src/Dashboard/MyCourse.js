@@ -20,19 +20,19 @@ const MyCourse = () => {
             teacher: 'Shourob & Abdullah',
             img: 'https://bohubrihi.com/wp-content/uploads/2022/04/Android-App-Development-Career-Track-Bohubrihi-620x440.png'
         }
-        
+
 
     ]
     return (
         <div >
             {/* card */}
             <div className=' mx-auto h-6 my-4 max-w-max px-3 rounded-full bg-blue-600 flex justify-center text-white font-bold'>
-        {mycourses.length} Courses
-      </div>
+                {mycourses.length} Courses
+            </div>
             {
                 mycourses.map(data => <div className="md:w-[60%] cs-card-shadow rounded-lg p-2  mx-auto mb-8 ">
                     <div className="md:flex gap-2">
-                        <div className="md:w-[35%] md:h-36 h-52 border rounded-md overflow-hidden">
+                        <div className="md:w-[35%] md:h-36 h-[280px] border rounded-md overflow-hidden">
                             <img className='w-full h-full ' src={data.img} alt="" />
                         </div>
                         <div className="text md:w-[65%] flex flex-col justify-between">

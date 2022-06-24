@@ -59,7 +59,7 @@ const Curriculum = () => {
 
 
     return (
-        <div className='p-2 h-[80vh] overflow-y-scroll homecatagory '>
+        <div className='p-2 '>
             <div className='flex justify-between items-center my-3'>
 
                 <h2 className='font-bold'>কমপ্লিট ফ্রন্ট-এন্ড ডেভেলপমেন্ট শিখুন (জাভাস্ক্রিপ্ট)</h2>
