@@ -46,17 +46,17 @@ const Dashboard = () => {
           <div className='md:w-[20%] md:max-h-[80vh] h-full rounded-sm shadow-md p-2'>
 
 
-            <CustomLink className="hover:bg-[#FC8B06]  " to={''}><AiOutlineHome className='inline-block text-xl' /> Home</CustomLink>
-            <CustomLink className="hover:bg-[#FC8B06]" to={'myprofile'}><BiUserCircle className='inline-block text-xl' />My Profile</CustomLink>
-            <CustomLink className="hover:bg-[#FC8B06]" to={'mycourse'}><MdOutlineHistoryEdu className='inline-block text-xl' />My Courses</CustomLink>
-            <CustomLink className="hover:bg-[#FC8B06]" to={'mycart'}> <AiOutlineShoppingCart className='inline-block text-xl' /> My Cart</CustomLink>
-            <CustomLink className="hover:bg-[#FC8B06]" to={'mywallet'}> <BsWallet2 className='inline-block text-xl' /> Wallet</CustomLink>
-            <CustomLink className="hover:bg-[#FC8B06]" to={'allcourses'}> <AiOutlineFileText className='inline-block text-xl' /> All Courses</CustomLink>
-            <CustomLink className="hover:bg-[#FC8B06]" to={'alllessons'}> <BiBookBookmark className='inline-block text-xl' /> All Lessons</CustomLink>
-            <CustomLink className="hover:bg-[#FC8B06]" to={'addcourses'}> <AiOutlineFileAdd className='inline-block text-xl' /> Add Course</CustomLink>
-            <CustomLink className="hover:bg-[#FC8B06]" to={'addlessons'}> <BiBookAdd className='inline-block text-xl' /> Add Lessons</CustomLink>
-            <CustomLink className="hover:bg-[#FC8B06]" to={'allteachers'}> <FaChalkboardTeacher className='inline-block text-xl' /> All Teachers</CustomLink>
-            <CustomLink className="hover:bg-[#FC8B06]" to={'allstudents'}> <FaUsers className='inline-block text-xl' /> All Students</CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]  " to={''}> <span className='w-3/4 flex  items-center'><AiOutlineHome className='block text-xl mr-6' /> <span className='block'>Home</span></span> </CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'myprofile'}>  <span className='w-3/4 flex  items-center'><BiUserCircle className='block  mr-6 text-xl' /> <span className='block '>My Profile</span></span></CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'mycourse'}><span className='w-3/4 flex  items-center'><MdOutlineHistoryEdu className='block text-xl mr-6' /><span className='block'> My Courses </span> </span></CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'mycart'}> <span className='w-3/4 flex  items-center'><AiOutlineShoppingCart className='block text-xl mr-6' /><span className='block'>  My Cart </span> </span></CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'mywallet'}><span className='w-3/4 flex  items-center'> <BsWallet2 className='block text-xl mr-6' /> <span className='block'>Wallet </span> </span></CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'allcourses'}><span className='w-3/4 flex  items-center'>  <AiOutlineFileText className='block text-xl mr-6' /><span className='block'> All Courses</span> </span></CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'alllessons'}><span className='w-3/4 flex  items-center'>  <BiBookBookmark className='block text-xl mr-6' /><span className='block'>  All Lessons</span> </span></CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'addcourses'}> <span className='w-3/4 flex  items-center'><AiOutlineFileAdd className='inline-block text-xl mr-6' /> <span className='block'> Add Course</span> </span></CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'addlessons'}> <span className='w-3/4 flex  items-center'><BiBookAdd className='inline-block text-xl  mr-6' /><span className='block'> Add Lessons</span></span></CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'allteachers'}><span className='w-3/4 flex  items-center'> <FaChalkboardTeacher className='inline-block text-xl mr-6' /> <span className='block'>All Teachers</span></span></CustomLink>
+            <CustomLink className="hover:bg-[#FC8B06]" to={'allstudents'}> <span className='w-3/4 flex  items-center'> <FaUsers className='inline-block text-xl mr-6' />  <span className='block'>All Students</span></span></CustomLink>
 
           </div>
           <div className='md:w-[80%] rounded-sm  shadow-md p-2 '>

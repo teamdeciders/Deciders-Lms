@@ -61,7 +61,7 @@ const DashboardHome = () => {
                     <div className='bg-[#41CCFF] cs-round h-4 rounded-md absulate top-0 '></div>
                     <div className="p-2">
                         <h3 className='font-bold'>Calendar</h3>
-                        <div className='flex border w-full justify-center flex-shrink'>
+                        <div className='flex  w-full justify-center flex-shrink'>
                             <DayPicker
                                 className=' w-full '
                                 mode='single'
