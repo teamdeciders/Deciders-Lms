@@ -4,7 +4,6 @@ import { AiOutlineCopy, AiOutlineDelete, AiOutlineEdit, AiOutlineEye } from 'rea
 const AllTeachers = () => {
     return (
         <div>
-<<<<<<< HEAD
             <div className=" overflow-x-auto rounded-sm">
                 <table className="w-full text-sm text-left">
                     <thead className="text-white bg-[#2366B5]">
@@ -107,10 +106,6 @@ const AllTeachers = () => {
 
                     </tbody>
                 </table>
-=======
-            <div className='border-b-2 border-slate-100 mb-4'>
-                <h1 className='text-2xl font-bold text-center'>All Teacher's</h1>
->>>>>>> c97f60f53f4cd2991e118000b123c3d119da87e6
             </div>
         </div>
     );
