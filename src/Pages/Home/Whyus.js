@@ -15,7 +15,7 @@ const Whyus = () => {
           Be enthusiastic.
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 mt-14 mx-auto">
-          <div className="rounded-xl p-2 bg-[#F5FCFF] hover:bg-[#D9F5FF] h-[293px] w-full max-w-md mx-auto text-center">
+          <div className="rounded-xl p-2 bg-[#F5FCFF] hover:bg-[#D9F5FF] h-[293px] w-full max-w-md mx-auto csm-shadow text-center">
             <div className="text-4xl flex justify-center my-6 ">
               <img src="https://10minuteschool.com/assets/icons/home-page/amader-orjon/teacher.png" alt="" />
             </div>
@@ -41,7 +41,7 @@ const Whyus = () => {
             </div>
           </div>
 
-          <div className="rounded-xl p-2 bg-[#F5FCFF] hover:bg-[#D9F5FF] h-[293px] w-full max-w-md mx-auto text-center">
+          <div className="rounded-xl p-2 bg-[#F5FCFF] hover:bg-[#D9F5FF] h-[293px] csm-shadow w-full max-w-md mx-auto text-center">
             <div className="text-4xl flex justify-center my-6 ">
               {/* <FaUserAlt className="text-[#CEC051]" /> */}
               <img src="https://10minuteschool.com/assets/icons/home-page/amader-orjon/content.png" alt="" />
