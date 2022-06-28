@@ -2,31 +2,34 @@ import React, { useState } from 'react';
 import { AiOutlineEyeInvisible } from 'react-icons/ai';
 import { BsFacebook } from 'react-icons/bs';
 import { FaGoogle } from 'react-icons/fa';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase.init';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import Loading from '../Loading/Loading';
+import useToken from '../../Components/Others/useToken';
 
 const SignUp = () => {
    const [showPassword, setShowPassword] = useState(false)
    const [showConfirmPassword, setShowConfirmPassword] = useState(false)
-
    //google singup
    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
    const { register, formState: { errors }, watch, handleSubmit } = useForm();
    const [createUserWithEmailAndPassword, user, loading, error,] = useCreateUserWithEmailAndPassword(auth);
    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
    const navigate = useNavigate()
+   const location = useLocation()
+
+   let from = location.state?.from?.pathname || '/'
+   const [token] = useToken(user || googleUser)
 
 
    const onSubmit = async data => {
-      console.log(data)
       await createUserWithEmailAndPassword(data.email, data.password)
       await updateProfile({ displayName: data.name });
       // console.log('updated done');
-
    }
+
 
 
    if (loading || googleLoading || updating) {
@@ -37,11 +40,20 @@ const SignUp = () => {
    if (error || googleError || updateError) {
       errorMessage = <p className='text-red-500 font-serif'> {error?.message || googleError?.message || updateError.message}</p>
    }
-
-   if (user || googleUser) {
+   if (token) {
       console.log(user);
-      navigate('/')
+      // navigate('/')
+      navigate(from, { replace: true })
    }
+
+
+
+
+
+
+
+
+
 
    return (
       <div className='lg:flex justify-center mt-12'>
