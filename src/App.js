@@ -3,6 +3,7 @@ import './App.css';
 import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
 import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
+import Test from './Components/TestFetures/Test';
 import AddCourses from './Dashboard/AddCourses';
 import AddLessons from './Dashboard/AddLessons';
 import AllCourses from './Dashboard/AllCourses';
@@ -47,7 +48,7 @@ function App() {
         <Route path={'/singup'} element={<SignUp />}></Route>
         <Route path={'/resetpassword'} element={<ResetPassword />}></Route>
 
-        <Route path={'*'} element={<NotfoundPage />}></Route>
+
         <Route path={'course/:id'} element={<SingleCourse />}>
 
           <Route index path='' element={<Overview />}></Route>
@@ -76,7 +77,11 @@ function App() {
           <Route path='allteachers' element={<AllTeachers />}></Route>
           <Route path='allstudents' element={<AllStudents />}></Route>
 
+
         </Route>
+        {/* Test File */}
+        <Route path='/test' element={<Test />}></Route>
+        <Route path={'*'} element={<NotfoundPage />}></Route>
 
       </Routes>
 
