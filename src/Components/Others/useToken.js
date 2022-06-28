@@ -39,7 +39,7 @@ const useToken = (user) => {
 
 
     }, [user])
-    return [user || user2]
+    return [token]
 };
 
 export default useToken;
