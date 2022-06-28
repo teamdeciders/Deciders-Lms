@@ -27,11 +27,7 @@ const AddLessons = () => {
                 <input className='w-full h-11 pl-3 rounded-md in-bord mb-3' type="text" placeholder='Lesson Type' />
 
             </div>
-            <div className="md:flex gap-4">
-                <input className='w-full h-11 pl-3 rounded-md in-bord mb-3' type="text" placeholder='Course Price' />
-                <input className='w-full h-11 pl-3 rounded-md in-bord mb-3' type="text" placeholder='Level' />
-
-            </div>
+           
             <input className='w-full h-11 pl-3 rounded-md in-bord mb-3' type="text" placeholder='Tag (Tag is Course Name)' />
 
 
