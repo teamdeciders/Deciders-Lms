@@ -20,7 +20,7 @@ const DashboardHome = () => {
                         <div className="flex justify-center items-center flex-col md:px-5 py-3 space-y-2  ">
                             <div className='w-full flex p-3 rounded-md border shadow'>
                                 <div className='w-[20%] text-end'>
-                                <div className='flex justify-center items-center  bg-[#FC8B06] w-12 h-12 rounded-md'>
+                                    <div className='flex justify-center items-center  bg-[#FC8B06] w-12 h-12 rounded-md'>
                                         <RiNotification2Fill className='text-2xl text-white' />
                                     </div>
                                 </div>
@@ -31,7 +31,7 @@ const DashboardHome = () => {
                             </div>
                             <div className='w-full flex p-3 rounded-md border shadow'>
                                 <div className='w-[20%] text-end'>
-                                <div className='flex justify-center items-center  bg-[#FC8B06] w-12 h-12 rounded-md'>
+                                    <div className='flex justify-center items-center  bg-[#FC8B06] w-12 h-12 rounded-md'>
                                         <RiNotification2Fill className='text-2xl text-white' />
                                     </div>
                                 </div>
@@ -61,9 +61,8 @@ const DashboardHome = () => {
                     <div className='bg-[#41CCFF] cs-round h-4 rounded-md absulate top-0 '></div>
                     <div className="p-2">
                         <h3 className='font-bold'>Calendar</h3>
-                        <div className='flex  w-full justify-center flex-shrink'>
+                        <div className='flex w-full justify-center flex-shrink'>
                             <DayPicker
-                                className=' w-full '
                                 mode='single'
                                 selected={date}
                                 onSelect={setDate}

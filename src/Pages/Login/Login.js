@@ -3,10 +3,11 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-fireba
 import { AiOutlineEyeInvisible } from 'react-icons/ai';
 import { BsFacebook } from 'react-icons/bs';
 import { FaGoogle } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase.init';
 import { useForm } from 'react-hook-form';
 import Loading from '../Loading/Loading';
+import useToken from '../../Components/Others/useToken';
 
 
 const Login = () => {
@@ -17,7 +18,10 @@ const Login = () => {
    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
    const [signInWithEmailAndPassword, user, loading, error,] = useSignInWithEmailAndPassword(auth);
    const { register, formState: { errors }, handleSubmit } = useForm();
+   const [token] = useToken(user || googleUser)
    const navigate = useNavigate()
+   const location = useLocation()
+   let from = location.state?.from?.pathname || "/"
 
    const onSubmit = (data) => {
       console.log(data);
@@ -33,9 +37,10 @@ const Login = () => {
       errorMessage = <p className='font-blod text-red-600'>{error?.message || googleError?.message}</p>
    }
 
-   if (user || googleUser) {
-      console.log(user);
-      navigate('/')
+   if (token) {
+      // console.log(user);
+      // navigate('/')
+      navigate(from, { replace: true });
    }
 
    return (
