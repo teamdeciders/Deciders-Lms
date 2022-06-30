@@ -3,11 +3,13 @@ import './App.css';
 import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
 import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
+import RequireAdmin from './Components/Others/RequireAdmin';
 import Test from './Components/TestFetures/Test';
 import AddCourses from './Dashboard/AddCourses';
 import AddLessons from './Dashboard/AddLessons';
 import AllCourses from './Dashboard/AllCourses';
 import AllLessons from './Dashboard/AllLessons';
+import AllUsers from './Dashboard/AllUsers';
 import AllStudents from './Dashboard/AllStudents';
 import AllTeachers from './Dashboard/AllTeachers';
 import Dashboard from './Dashboard/Dashboard';
@@ -57,7 +59,7 @@ function App() {
           <Route path='review' element={<Review />}></Route>
         </Route>
 
-        <Route path={'dashboard'} element={<Dashboard />}>
+        <Route path={'dashboard'} element={<RequireAuth><Dashboard /></RequireAuth>}>
           {/* for all user */}
           <Route index path='' element={<DashboardHome />}></Route>
           <Route path='myprofile' element={<MyProfile />}></Route>
@@ -75,7 +77,8 @@ function App() {
           <Route path='addcourses' element={<AddCourses />}></Route>
           <Route path='addlessons' element={<AddLessons />}></Route>
           <Route path='allteachers' element={<AllTeachers />}></Route>
-          <Route path='allstudents' element={<AllStudents />}></Route>
+          <Route path='allusers' element={<AllUsers />}></Route>
+          <Route path='allstudents' element={<RequireAdmin><AllStudents /> </RequireAdmin>}></Route>
 
 
         </Route>

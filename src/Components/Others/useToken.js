@@ -12,11 +12,7 @@ const useToken = (user) => {
         const displayName = user?.user2?.displayName
         console.log(displayName);
         const currentUser = {
-            email: email,
-            userType: 'student',
-            name: displayName
-
-
+            email: email
         }
         console.log(user);
 
