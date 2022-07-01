@@ -35,6 +35,7 @@ import Review from './Pages/SingleCourse/Review';
 import SingleCourse from './Pages/SingleCourse/SingleCourse';
 import Teach from './Pages/Teach/Teach';
 import AddReview from './Pages/AddReview/AddReview';
+import OffersAndAccouncment from './Dashboard/OffersAndAccouncment';
 function App() {
   return (
     <div>
@@ -74,13 +75,15 @@ function App() {
           <Route path='mywallet' element={<Wallet />}></Route>
 
           {/* only admin */}
-          <Route path='allcourses' element={<AllCourses />}></Route>
-          <Route path='alllessons' element={<AllLessons />}></Route>
-          <Route path='addcourses' element={<AddCourses />}></Route>
-          <Route path='addlessons' element={<AddLessons />}></Route>
-          <Route path='allteachers' element={<AllTeachers />}></Route>
-          <Route path='allusers' element={<AllUsers />}></Route>
-          <Route path='allstudents' element={<RequireAdmin><AllStudents /> </RequireAdmin>}></Route>
+
+          <Route path='allcourses' element={<RequireAdmin><AllCourses /></RequireAdmin>}></Route>
+          <Route path='alllessons' element={<RequireAdmin><AllLessons /></RequireAdmin>}></Route>
+          <Route path='addcourses' element={<RequireAdmin><AddCourses /></RequireAdmin>}></Route>
+          <Route path='addlessons' element={<RequireAdmin><AddLessons /></RequireAdmin>}></Route>
+          <Route path='allteachers' element={<RequireAdmin><AllTeachers /></RequireAdmin>}></Route>
+          <Route path='allusers' element={<RequireAdmin><AllUsers /></RequireAdmin>}></Route>
+          <Route path='allstudents' element={<RequireAdmin><AllStudents /></RequireAdmin>}></Route>
+          <Route path='offers' element={<RequireAdmin><OffersAndAccouncment /></RequireAdmin>}></Route>
 
 
         </Route>

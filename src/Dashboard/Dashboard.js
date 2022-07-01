@@ -3,7 +3,7 @@ import { Link, Outlet, useParams } from 'react-router-dom';
 import { AiOutlineHome, AiOutlineShoppingCart, AiOutlineLogout, AiOutlineFileAdd, AiOutlineFileText } from 'react-icons/ai'
 import { BiUserCircle, BiBookBookmark, BiBookAdd } from 'react-icons/bi'
 import { BsFillFileEarmarkTextFill, BsWallet2 } from 'react-icons/bs'
-import { MdOutlineHistoryEdu, MdReviews } from 'react-icons/md'
+import { MdNotificationAdd, MdOutlineHistoryEdu, MdReviews } from 'react-icons/md'
 import { FaUsers, FaChalkboardTeacher } from 'react-icons/fa'
 import { useQuery } from 'react-query';
 import CustomLink from './CustomLink';
@@ -77,6 +77,7 @@ const Dashboard = () => {
                 <CustomLink className="hover:bg-[#FC8B06]" to={'allteachers'}><span className='w-3/4 flex  items-center'> <FaChalkboardTeacher className='inline-block text-xl mr-6' /> <span className='block'>All Teachers</span></span></CustomLink>
                 <CustomLink className="hover:bg-[#FC8B06]" to={'allstudents'}> <span className='w-3/4 flex  items-center'> <FaUsers className='inline-block text-xl mr-6' />  <span className='block'>All Students</span></span></CustomLink>
                 <CustomLink className="hover:bg-[#FC8B06]" to={'allusers'}> <span className='w-3/4 flex  items-center'> <FaUsers className='inline-block text-xl mr-6' />  <span className='block'>All User</span></span></CustomLink>
+                <CustomLink className="hover:bg-[#FC8B06]" to={'offers'}> <span className='w-3/4 flex  items-center'> <MdNotificationAdd className='inline-block text-xl mr-6' />  <span className='block'>Add Offers</span></span></CustomLink>
               </>
             }
 

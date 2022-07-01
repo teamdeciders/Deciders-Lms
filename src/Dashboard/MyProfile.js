@@ -77,7 +77,7 @@ const MyProfile = () => {
         <section>
             <div className='flex justify-between md:px-3'>
                 <h2 className='text-3xl font-bold'>My Profile</h2>
-                <p className='text-blue-600 font-bold' onClick={setActive(!active)}>Edit</p>
+                <p className='text-blue-600 font-bold cursor-pointer' onClick={() => setActive(!active)}>Edit</p>
             </div>
             <div className='border mt-2'></div>
             <div className='flex justify-center items-center md:space-x-28 my-5 flex-col md:flex-row'>
