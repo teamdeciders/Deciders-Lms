@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { AiOutlineCopy, AiOutlineDelete, AiOutlineEdit, AiOutlineEye } from 'react-icons/ai';
 import { useQuery } from 'react-query';
@@ -11,6 +11,8 @@ const AllStudents = () => {
         return <Loading></Loading>
     }
 
+    let st = allstudents.filter(sd => !sd.role)
+    const allStudents = st
 
     return (
         <div>
@@ -39,7 +41,7 @@ const AllStudents = () => {
 
 
                         {
-                            allstudents.map(student => <tr key={student._id}>
+                            allStudents.map(student => <tr key={student._id}>
                                 <td className="px-6 py-4">
                                     {student.email}
                                 </td>
@@ -50,10 +52,8 @@ const AllStudents = () => {
 
                                 <td className="px-6 py-4">
                                     <div className='flex gap-3 cursor-pointer'>
-                                        <AiOutlineEye></AiOutlineEye>
-                                        <AiOutlineEdit></AiOutlineEdit>
-                                        <AiOutlineCopy></AiOutlineCopy>
-                                        <AiOutlineDelete></AiOutlineDelete>
+
+                                        <AiOutlineDelete className='text-2xl hover:text-red-500'></AiOutlineDelete>
                                     </div>
                                 </td>
 

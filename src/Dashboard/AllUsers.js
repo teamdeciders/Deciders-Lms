@@ -40,7 +40,7 @@ const AllUsers = () => {
                                     {user?.email}
                                 </td>
                                 <td className="px-6 py-4">
-                                    {user?.userType ? user?.userType : 'Student'}
+                                    {user?.role ? user?.role : user?.userType}
                                 </td>
 
                                 <td className="px-6 py-4">
@@ -49,13 +49,14 @@ const AllUsers = () => {
 
                                 <td className="px-6 py-4">
                                     <div className='flex gap-3 cursor-pointer'>
-                                        <button className="px-2 py-1 outline rounded-md hover:bg-red-500  hover:text-white">Make Admin</button>
-                                        <button className="px-2 py-1 outline rounded-md hover:bg-red-500  hover:text-white">Make Teacher</button>
+                                        {user?.role === 'admin' ? <></> : <button className="px-2 py-1 outline rounded-md hover:bg-red-500  hover:text-white">Make Admin</button>}
+                                        {user?.role === 'teacher' ? <></> : <button className="px-2 py-1 outline rounded-md hover:bg-red-500  hover:text-white">Make Teacher</button>}
                                         <button className="px-2 py-1 outline rounded-md hover:bg-red-500  hover:text-white">Delete User</button>
                                     </div>
                                 </td>
 
                             </tr>
+
                             )
                         }
 

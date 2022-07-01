@@ -5,24 +5,30 @@ import { BiUserCircle, BiBookBookmark, BiBookAdd } from 'react-icons/bi'
 import { BsFillFileEarmarkTextFill, BsWallet2 } from 'react-icons/bs'
 import { MdOutlineHistoryEdu, MdReviews } from 'react-icons/md'
 import { FaUsers, FaChalkboardTeacher } from 'react-icons/fa'
+import { useQuery } from 'react-query';
 import CustomLink from './CustomLink';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../Firebase.init';
 import UseAdmin from '../Components/Others/UseAdmin';
+import Loading from '../Pages/Loading/Loading';
 const Dashboard = () => {
   const [user] = useAuthState(auth)
   const [admin] = UseAdmin(user)
-  console.log(admin);
+  const { data: profiledata, isLoading, refetch } = useQuery('profiledata', () => fetch(`http://localhost:5000/myprofile/${user?.email}`).then(res => res.json()));
+  if (isLoading) {
+    return <Loading />
+  }
+  const { name, img } = profiledata[0]
   return (
     <div className=''>
       <div className='  bg-[#FDFCF6] w-full '>
         <div className='lg:max-w-7xl md-w-full  mx-auto px-4  md:px-12 '>
           <div className=" mx-auto md:w-[375px] py-8">
             <div className="w-[100px] h-[100px] rounded-full mx-auto bg-blue-50 border-2 border-black overflow-hidden ">
-              <img className='w-full h-full' src={user?.photoURL} alt="" />
+              <img className='rounded-full w-full h-full ring-2' src={img ? img : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png'} alt="" />
             </div>
             <div className='text-center'>
-              <h2 className='text-2xl font-bold my-2'>{user?.displayName}</h2>
+              {name ? <p className='text-2xl font-bold my-2'>{name}</p> : <p className='text-2xl font-bold my-2'>{user?.displayName}</p>}
             </div>
             <div className=' p-2 flex gap-6 justify-center'>
               <div className='text-center' >
