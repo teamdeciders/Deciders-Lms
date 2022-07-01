@@ -17,10 +17,8 @@ const UseAdmin = (user) => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    let userType = data[0]?.userType
-                    console.log(data);
-                    console.log(userType);
-                    if (userType == 'admin') {
+                    let role = data[0]?.role
+                    if (role === 'admin') {
                         setAdmin(true)
                         setAdminLoading(false)
                     }
