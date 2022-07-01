@@ -34,6 +34,7 @@ import Overview from './Pages/SingleCourse/Overview';
 import Review from './Pages/SingleCourse/Review';
 import SingleCourse from './Pages/SingleCourse/SingleCourse';
 import Teach from './Pages/Teach/Teach';
+import AddReview from './Pages/AddReview/AddReview';
 function App() {
   return (
     <div>
@@ -64,6 +65,7 @@ function App() {
           <Route index path='' element={<DashboardHome />}></Route>
           <Route path='myprofile' element={<MyProfile />}></Route>
           <Route path='mycourse' element={<MyCourse />}></Route>
+          <Route path='addreview' element={<AddReview />}></Route>
 
           {/* only Student */}
           <Route path='mycart' element={<MyCart />}></Route>
