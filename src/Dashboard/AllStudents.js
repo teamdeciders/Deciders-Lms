@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { AiOutlineCopy, AiOutlineDelete, AiOutlineEdit, AiOutlineEye } from 'react-icons/ai';
+import { AiOutlineDelete, } from 'react-icons/ai';
 import { useQuery } from 'react-query';
-import auth from '../Firebase.init';
 import Loading from '../Pages/Loading/Loading';
+import Swal from 'sweetalert2'
+
 const AllStudents = () => {
 
     const { data: allstudents, isLoading, refetch } = useQuery('allstudents', () => fetch('http://localhost:5000/allstudents').then(res => res.json()));
@@ -14,6 +13,49 @@ const AllStudents = () => {
     let st = allstudents.filter(sd => !sd.role)
     const allStudents = st
 
+
+
+
+    const handleDeleteStudent = id => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+
+                fetch(`http://localhost:5000/delete/${id}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'content-type': 'application/json',
+                        // authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                    }
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount) {
+                            Swal.fire(
+                                'Deleted!',
+                                'User has been deleted.',
+                                'success'
+                            )
+
+                            refetch()
+
+                        }
+                    })
+
+            }
+        })
+
+
+    }
     return (
         <div>
             <div className='border-b-2 border-slate-100 mb-4'>
@@ -52,8 +94,7 @@ const AllStudents = () => {
 
                                 <td className="px-6 py-4">
                                     <div className='flex gap-3 cursor-pointer'>
-
-                                        <AiOutlineDelete className='text-2xl hover:text-red-500'></AiOutlineDelete>
+                                        <AiOutlineDelete onClick={() => handleDeleteStudent(student._id)} className='text-2xl hover:text-red-500'></AiOutlineDelete>
                                     </div>
                                 </td>
 
