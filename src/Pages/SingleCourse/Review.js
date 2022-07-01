@@ -22,6 +22,9 @@ const Review = () => {
                     </div>
 
                 </div>
+
+
+
                 <div className='shadow p-4 '>
                     <div className='flex gap-4'>
                         <img className='w-16 h-16 ring-2 rounded-full' src="https://i.ibb.co/1nNrJJx/Kids-Teacher-04.png" alt="" />
@@ -40,6 +43,8 @@ const Review = () => {
                     </div>
 
                 </div>
+
+
                 <div className='shadow p-4 '>
                     <div className='flex gap-4'>
                         <img className='w-16 h-16 ring-2 rounded-full' src="https://i.ibb.co/qrK4XbD/Kids-Teacher-03.png" alt="" />

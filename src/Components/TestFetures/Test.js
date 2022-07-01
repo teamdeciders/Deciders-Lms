@@ -1,16 +1,20 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useQuery } from 'react-query';
+import auth from '../../Firebase.init';
+import AddReview from '../../Pages/AddReview/AddReview';
+import Loading from '../../Pages/Loading/Loading';
 
 const Test = () => {
+    const [user] = useAuthState(auth)
+    const { data: profiledata, isLoading, refetch } = useQuery('profiledata', () => fetch(`http://localhost:5000/myprofile/${user?.email}`).then(res => res.json()));
+    if (isLoading) {
+        return <Loading />
+    }
+    const { name, img } = profiledata[0]
     return (
         <div>
-            <div className='bg-[#FDFCF6] min-h-[30vh] p-10'>
-                <h1 className='text-3xl font-bold text-center'>I am Test File</h1>
-            </div>
-            <div className='px-6 md:px-14 lg:max-w-7xl md-w-full mx-auto min-h-[60vh] h-auto'>
-                <div className=" p-4 cs-card-shadow rounded-md  ">
-                    <iframe className='mx-auto md:w-[860px] md:h-[515px] h-[250px] w-full'  src="https://www.youtube.com/embed/oz4fDIbKw10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
+            <AddReview img={img}></AddReview>
         </div>
     );
 };

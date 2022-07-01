@@ -2,6 +2,7 @@ import React from 'react';
 import { AiOutlineCopy, AiOutlineDelete, AiOutlineEdit, AiOutlineEye } from 'react-icons/ai';
 import { useQuery } from 'react-query';
 import Loading from '../Pages/Loading/Loading';
+import Swal from 'sweetalert2'
 
 const AllTeachers = () => {
     const { data: allteachers, isLoading, refetch } = useQuery('allteachers', () => fetch('http://localhost:5000/allteachers').then(res => res.json()));
@@ -9,6 +10,51 @@ const AllTeachers = () => {
     if (isLoading) {
         return <Loading></Loading>
     }
+
+
+    const handleDeleteTeacher = id => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+
+                fetch(`http://localhost:5000/delete/${id}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'content-type': 'application/json',
+                        // authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                    }
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount) {
+                            Swal.fire(
+                                'Deleted!',
+                                'User has been deleted.',
+                                'success'
+                            )
+
+                            refetch()
+
+                        }
+                    })
+
+            }
+        })
+
+
+    }
+
+
+
     return (
         <div>
             <div className='border-b-2 border-slate-100 mb-4'>
@@ -47,10 +93,8 @@ const AllTeachers = () => {
 
                                 <td className="px-6 py-4">
                                     <div className='flex gap-3 cursor-pointer'>
-                                        <AiOutlineEye></AiOutlineEye>
-                                        <AiOutlineEdit></AiOutlineEdit>
-                                        <AiOutlineCopy></AiOutlineCopy>
-                                        <AiOutlineDelete></AiOutlineDelete>
+
+                                        <AiOutlineDelete className='text-2xl hover:text-red-500' onClick={() => handleDeleteTeacher(teacher._id)}></AiOutlineDelete>
                                     </div>
                                 </td>
                             </tr>)
