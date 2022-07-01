@@ -1,12 +1,11 @@
 import React from 'react';
-import { AiOutlineCopy, AiOutlineDelete, AiOutlineEdit, AiOutlineEye } from 'react-icons/ai';
 import { useQuery } from 'react-query';
 import Loading from '../Pages/Loading/Loading';
 const AllUsers = () => {
     const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/users').then(res => res.json()));
 
     if (isLoading) {
-        <Loading />
+        return <Loading />
     }
     return (
         <div>
@@ -18,7 +17,7 @@ const AllUsers = () => {
                     <thead className="text-white bg-[#2366B5]">
                         <tr>
                             <th className="px-6 py-4">
-                                Title
+                                Email
                             </th>
                             <th className="px-6 py-4">
                                 User Type
@@ -41,7 +40,7 @@ const AllUsers = () => {
                                     {user?.email}
                                 </td>
                                 <td className="px-6 py-4">
-                                    {user?.userType ? user?.userType : 'Studet'}
+                                    {user?.userType ? user?.userType : 'Student'}
                                 </td>
 
                                 <td className="px-6 py-4">
