@@ -73,11 +73,11 @@ const DashboardHome = () => {
             <div className='md:px-11 my-4'>
                 <div className='font-bold'>Accouncment</div>
                 {
-                    accouncments.map(an => <div key={an._id} className='m-5 space-y-3'>
+                    accouncments?.map(an => <div key={an._id} className='m-5 space-y-3'>
                         <div className='  border-l-8 border-blue-700'>
 
                             <div className='font-bold pl-4'>
-                                {an.Announcmenttitle} <span onClick={() => viewADetails(an.Announcmenttitle, an.Announcmentdetails)} className='inline-block font-bold text-blue-500'>Read More</span>
+                                {an?.Announcmenttitle} <span onClick={() => viewADetails(an?.Announcmenttitle, an?.Announcmentdetails)} className='inline-block font-bold text-blue-500'>Read More</span>
                             </div>
                         </div>
 

@@ -93,6 +93,8 @@ const Login = () => {
                   <button className=' bg-[#515FCE] w-full py-3 px-1 text-white rounded mt-4'><span className='flex items-center gap-2 justify-center'><BsFacebook></BsFacebook> Continue With Facebook</span></button>
                </div>
                <p className='font-medium text-center mt-5'>New To Dciders Lms? <Link to='/singup'><span className='text-[#515FCE]'>Create an Account</span></Link></p>
+
+
             </form>
 
          </div>
