@@ -84,7 +84,7 @@ const Dashboard = () => {
           </div>
           <div className='md:w-[80%]  rounded-sm  shadow-md p-2 '>
             {/* Out let Here */}
-            <Outlet img={img} />
+            <Outlet />
           </div>
 
         </div>
