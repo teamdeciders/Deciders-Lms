@@ -14,7 +14,11 @@ const Test = () => {
     const { name, img } = profiledata[0]
     return (
         <div>
-            <AddReview img={img}></AddReview>
+            {/* <AddReview img={img}></AddReview> */}
+
+
+
+
         </div>
     );
 };

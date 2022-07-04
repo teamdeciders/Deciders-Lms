@@ -105,6 +105,9 @@ const AllStudents = () => {
 
                     </tbody>
                 </table>
+
+
+
             </div>
         </div>
     );
