@@ -62,7 +62,7 @@ const MyCart = () => {
         {mycourses.length} {mycourses.length > 1 ? 'Courses on your Cart' : 'Course on your Cart'}
       </div>
       {
-        mycourses.map(data => <div key={data.id} className="md:w-[60%] cs-card-shadow rounded-lg p-2  mx-auto mb-8 relative">
+        mycourses.map(data => <div key={data.id} className="md:w-[50%] cs-card-shadow rounded-lg p-2  mx-auto mb-8 relative">
           <div onClick={() => deleteOrder(data.id)} className='w-10 h-10 bg-[#FDFCF6] hover:bg-red-500 hover:text-white rounded-full border absolute right-2 top-2 md:top-10 flex justify-center items-center'>
             <VscError className='text-3xl' />
           </div>

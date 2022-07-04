@@ -52,8 +52,8 @@ const Dashboard = () => {
         </div>
       </div>
       <div className="w-full mt-8">
-        <div className='lg:max-w-7xl md-w-full  mx-auto md:flex gap-2'>
-          <div className='md:w-[20%] md:max-h-max h-full rounded-sm shadow-md p-2'>
+        <div className='md-w-full  mx-auto md:flex gap-10 justify-center'>
+          <div className='md:w-[15%] md:max-h-max h-full rounded-sm shadow-md p-2'>
 
 
             <CustomLink className="hover:bg-[#FC8B06]  " to={''}> <span className='w-3/4 flex  items-center'><AiOutlineHome className='block text-xl mr-6' /> <span className='block'>Home</span></span> </CustomLink>
@@ -82,7 +82,7 @@ const Dashboard = () => {
             }
 
           </div>
-          <div className='md:w-[80%] rounded-sm  shadow-md p-2 '>
+          <div className='md:w-[80%]  rounded-sm  shadow-md p-2 '>
             {/* Out let Here */}
             <Outlet img={img} />
           </div>
