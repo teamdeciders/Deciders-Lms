@@ -36,24 +36,20 @@ const Navbar = () => {
                             <li className='md:ml-8 text-xl md:my-0 my-7'>
                                 <Link to={'/'} className='text-gray-800 hover:text-gray-400 duration-500'>Home</Link>
                             </li>
-                            <li className='md:ml-8 text-xl md:my-0 my-7'>
-                                <Link to={'/dashboard'} className='text-gray-800 hover:text-gray-400 duration-500'>Dashboard</Link>
-                            </li>
-                            <li className='md:ml-8 text-xl md:my-0 my-7'>
-                                <Link to={'/about'} className='text-gray-800 hover:text-gray-400 duration-500'>About</Link>
-                            </li>
+
+                        
                             <li className='md:ml-8 text-xl md:my-0 my-7'>
                                 <Link to={'/courses'} className='text-gray-800 hover:text-gray-400 duration-500'>Courses</Link>
                             </li>
-                            <li className='md:ml-8 text-xl md:my-0 my-7'>
-                                <Link to={'/blog'} className='text-gray-800 hover:text-gray-400 duration-500'>Blogs</Link>
-                                
-                            </li>
+                           
                             <li className='md:ml-8 text-xl md:my-0 my-7'>
                                 <Link to={'/teach'} className='text-gray-800 hover:text-gray-400 duration-500'>Teach</Link>
                             </li>
                             <li className='md:ml-8 text-xl md:my-0 my-7'>
                                 <Link to={'/contact'} className='text-gray-800 hover:text-gray-400 duration-500'>Contact</Link>
+                            </li>
+                            <li className='md:ml-8 text-xl md:my-0 my-7'>
+                                <Link to={'/dashboard'} className='text-gray-800 hover:text-gray-400 duration-500'>Dashboard</Link>
                             </li>
                             <li className='md:ml-8 text-xl md:my-0 my-7'>
                                 <Link to={'/checkout'} className='text-gray-800 hover:text-gray-400 duration-500'>

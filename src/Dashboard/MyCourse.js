@@ -30,7 +30,7 @@ const MyCourse = () => {
                 {mycourses.length} Courses
             </div>
             {
-                mycourses.map(data => <div className="md:w-[60%] cs-card-shadow rounded-lg p-2  mx-auto mb-8 ">
+                mycourses.map(data => <div className="md:w-[50%] cs-card-shadow rounded-lg p-2  mx-auto mb-8 ">
                     <div className="md:flex gap-2">
                         <div className="md:w-[35%] md:h-36 h-[280px] border rounded-md overflow-hidden">
                             <img className='w-full h-full ' src={data.img} alt="" />

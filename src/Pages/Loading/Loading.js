@@ -5,6 +5,7 @@ const Loading = ({ props }) => {
 
 
     return (
+<<<<<<< HEAD
 
         <div>
             <h1>{props?.title || <Skeleton />}</h1>
@@ -12,6 +13,14 @@ const Loading = ({ props }) => {
         </div>
 
 
+=======
+        <div className="sk-folding-cube">
+        <div className="sk-cube1 sk-cube"></div>
+        <div className="sk-cube2 sk-cube"></div>
+        <div className="sk-cube4 sk-cube"></div>
+        <div className="sk-cube3 sk-cube"></div>
+      </div>
+>>>>>>> 5791e7c9f9d2d3b6b57676f7efa623056b848ab3
     );
 };
 
