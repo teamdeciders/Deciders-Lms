@@ -36,9 +36,12 @@ import SingleCourse from './Pages/SingleCourse/SingleCourse';
 import Teach from './Pages/Teach/Teach';
 import AddReview from './Pages/AddReview/AddReview';
 import OffersAndAccouncment from './Dashboard/OffersAndAccouncment';
+import ScrollToTop from './Components/ScrollToTop';
 function App() {
   return (
     <div>
+
+      <ScrollToTop />
       <Navbar></Navbar>
       <Routes>
         <Route path={'/'} element={<Home />}></Route>

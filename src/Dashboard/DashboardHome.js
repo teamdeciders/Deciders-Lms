@@ -2,15 +2,20 @@ import React from 'react';
 import { useState } from 'react';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { AiOutlineDelete } from 'react-icons/ai';
 import { RiNotification2Fill } from 'react-icons/ri'
 import { useQuery } from 'react-query';
 import Swal from 'sweetalert2';
+import UseAdmin from '../Components/Others/UseAdmin';
+import auth from '../Firebase.init';
 import Loading from '../Pages/Loading/Loading';
 
 
 
 const DashboardHome = () => {
-
+    const [user] = useAuthState(auth)
+    const [admin] = UseAdmin(user)
     const [date, setDate] = useState(new Date())
     const { data: offers, isLoading, refetch } = useQuery('offers', () => fetch('http://localhost:5000/offers').then(res => res.json()));
     const { data: accouncments, aisLoading } = useQuery('accouncments', () => fetch('http://localhost:5000/announcments').then(res => res.json()));
@@ -46,8 +51,9 @@ const DashboardHome = () => {
                                         </div>
                                     </div>
                                     <div className='w-[70%]'>
-                                        <div>{offer.offerTitle}</div>
-                                        <div>10 min ago</div>
+                                        <div>{offer.offerTitle.slice(0, 25)}...</div>
+                                        <div className=' '> 10 min ago</div>
+                                    
                                     </div>
                                 </div>)
                             }
