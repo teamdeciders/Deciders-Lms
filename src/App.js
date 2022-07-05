@@ -37,6 +37,7 @@ import Teach from './Pages/Teach/Teach';
 import AddReview from './Pages/AddReview/AddReview';
 import OffersAndAccouncment from './Dashboard/OffersAndAccouncment';
 import ScrollToTop from './Components/ScrollToTop';
+import Cart from './Pages/Cart/Cart';
 function App() {
   return (
     <div>
@@ -50,13 +51,14 @@ function App() {
         <Route path={'/blog'} element={<Blog />}></Route>
         <Route path={'/teach'} element={<Teach />}></Route>
         <Route path={'/contact'} element={<RequireAuth><ContactUs /></RequireAuth>}></Route>
-        <Route path={'/checkout'} element={<CheckoutPage />}></Route>
+        <Route path={'/checkout'} element={<RequireAuth><CheckoutPage /></RequireAuth>}></Route>
         <Route path={'/login'} element={<Login />}></Route>
         <Route path={'/singup'} element={<SignUp />}></Route>
         <Route path={'/resetpassword'} element={<ResetPassword />}></Route>
+        <Route path={'/cart'} element={<Cart />}></Route>
 
 
-        <Route path={'course/:id'} element={<SingleCourse />}>
+        <Route path={'/course/:id'} element={<SingleCourse />}>
 
           <Route index path='' element={<Overview />}></Route>
           <Route path='curriculum' element={<Curriculum />}></Route>

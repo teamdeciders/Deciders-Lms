@@ -2,7 +2,13 @@ import React, { useState } from 'react';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import aboutheaderimage from '../../Assets/aboutheaderimage.png'
 import card from '../../Assets/card1.png'
+import Loading from '../../Pages/Loading/Loading';
+import { useQuery } from 'react-query';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../Firebase.init';
+
 const CheckoutPage = () => {
+    const [user] = useAuthState(auth)
 
     const [count, setCount] = useState(1)
 
@@ -18,88 +24,68 @@ const CheckoutPage = () => {
             return setCount(count - 1)
         }
     }
+
+    //  load my cart
+    // 
+    const { data: myAllCart, isLoading, refetch } = useQuery('myAllCart', () => fetch(`http://localhost:5000/myallcart/${user?.email}`).then(res => res.json()));
+    console.log(myAllCart);
+    if (isLoading) {
+        return <Loading />
+    }
+
     return (
         <div>
-              {/* Checkout Banner */}
-              <div className='bg-[#FDFCF6] '>
-                <div className='px-6 md:px-14 lg:max-w-7xl md-w-full mx-auto min-h-[60vh] h-auto'>
 
-                    <div className='lg:flex lg:justify-around lg:items-center md:flex md:justify-center md:items-center'>
-                        <div>
-                            <h1 className='text-4xl font-bold'>Checkout Page</h1>
-                        </div>
-                        <div className='mt-8'>
-                            <img src={aboutheaderimage} alt="" />
-                        </div>
-                    </div>
-
-                </div>
-            </div>
 
             <div className='bg-[#F6F7FD] px-5 md:px-24 py-16'>
-            <div className='px-6 md:px-14 lg:max-w-7xl md-w-full mx-auto min-h-[60vh] h-auto'>
-                <p className='text-[#515FCE] font-semibold md:my-8'>আপনার ফাইলে 2 টি কোর্স যোগ করেছেন।</p>
+                <div className='px-6 md:px-14 lg:max-w-7xl md-w-full mx-auto min-h-[60vh] h-auto'>
+                    <p className='text-[#515FCE] font-semibold md:my-8'>আপনার ফাইলে 2 টি কোর্স যোগ করেছেন।</p>
 
-                <div className='bg-[#979FE2] p-5 rounded grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative my-2'>
-                    <img className='rounded w-80' src={card} alt="" />
-                    <div>
-                        <AiFillCloseCircle className='absolute top-0 right-0 md:top-2 md:right-3  text-white text-lg' />
-                        <div className='text-2xl text-white font-medium'>ফাইন্যান্স এবং ইনভেস্টমেন্ট সিরিজ:</div>
-                        <div className='text-white font-medium'>গ্রাফিক্স ডিজাইন</div>
-                        <div className='text-white font-medium text-xl mt-10 md:mt-28'>৳ ২৫০০</div>
-                    </div>
-                    <div className='md:text-end text-center'>
-                        <div className='flex justify-center md:justify-end md:mt-40 md:w-60'>
-                            <p onClick={isDecrease} className='border px-5 py-2 rounded-l text-[#32323266] font-bold text-xl bg-white cursor-pointer'>-</p>
-                            <p className='border px-5 py-2 bg-white text-[#515FCE] font-bold'>{count}</p>
-                            <p onClick={isIncrease} className='border px-5 py-2 rounded-r text-[#CEC051] font-bold text-xl bg-white cursor-pointer'>+</p>
+                    <div className='bg-[#979FE2] p-5 rounded grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative my-2'>
+                        <img className='rounded w-80' src={card} alt="" />
+                        <div>
+                            <AiFillCloseCircle className='absolute top-0 right-0 md:top-2 md:right-3  text-white text-lg' />
+                            <div className='text-2xl text-white font-medium'>ফাইন্যান্স এবং ইনভেস্টমেন্ট সিরিজ:</div>
+                            <div className='text-white font-medium'>গ্রাফিক্স ডিজাইন</div>
+                            <div className='text-white font-medium text-xl mt-10 md:mt-28'>৳ ২৫০০</div>
+                        </div>
+                        <div className='md:text-end text-center'>
+                            <div className='flex justify-center md:justify-end md:mt-40 md:w-60'>
+                                <p onClick={isDecrease} className='border px-5 py-2 rounded-l text-[#32323266] font-bold text-xl bg-white cursor-pointer'>-</p>
+                                <p className='border px-5 py-2 bg-white text-[#515FCE] font-bold'>{count}</p>
+                                <p onClick={isIncrease} className='border px-5 py-2 rounded-r text-[#CEC051] font-bold text-xl bg-white cursor-pointer'>+</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
 
-                <div className='bg-[#979FE2] p-5 rounded grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative my-2'>
-                    <img className='rounded w-80' src={card} alt="" />
-                    <div>
-                        <AiFillCloseCircle className='absolute top-0 right-0 md:top-2 md:right-3 text-white text-lg' />
-                        <div className='text-2xl text-white font-medium'>ফাইন্যান্স এবং ইনভেস্টমেন্ট সিরিজ:</div>
-                        <div className='text-white font-medium'>গ্রাফিক্স ডিজাইন</div>
-                        <div className='text-white font-medium text-xl mt-10 md:mt-28'>৳ ২৫০০</div>
-                    </div>
-                    <div className='md:text-end text-center'>
-                        <div className='flex justify-center md:justify-end md:mt-40 md:w-60'>
-                            <p onClick={isDecrease} className='border px-5 py-2 rounded-l text-[#32323266] font-bold text-xl bg-white cursor-pointer'>-</p>
-                            <p className='border px-5 py-2 bg-white text-[#515FCE] font-bold'>{count}</p>
-                            <p onClick={isIncrease} className='border px-5 py-2 rounded-r text-[#CEC051] font-bold text-xl bg-white cursor-pointer'>+</p>
+
+
+
+                    <div className='md:w-2/4 w-full  mt-12'>
+                        <h1 className='text-3xl font-bold mb-8'>বিস্তারিত :</h1>
+                        <div className='flex justify-between'>
+                            <p>মোট কোর্স</p>
+                            <p> ৪ টি</p>
                         </div>
+                        <div className='flex justify-between mt-5 mb-2'>
+                            <p>কোর্স মূল্য</p>
+                            <p> 10,000 টাকা</p>
+                        </div>
+                        <hr />
+                        <div className='flex justify-between mt-3'>
+                            <p>মোট মূল্য</p>
+                            <p> 10,000 টাকা</p>
+                        </div>
+                        <button className=' bg-[#515FCE] block max-w-max  px-8 py-3  rounded text-white mt-6'>Buy Course</button>
+
                     </div>
+
                 </div>
 
-                <div className='md:w-2/4 w-full  mt-12'>
-                    <h1 className='text-3xl font-bold mb-8'>বিস্তারিত :</h1>
-                     <div className='flex justify-between'>
-                        <p>মোট কোর্স</p>
-                        <p> ৪ টি</p>
-                     </div>
-                      <div className='flex justify-between mt-5 mb-2'>
-                        <p>কোর্স মূল্য</p>
-                        <p> 10,000 টাকা</p>
-                     </div>
-                      <hr />
-                      <div className='flex justify-between mt-3'>
-                        <p>মোট মূল্য</p>
-                        <p> 10,000 টাকা</p>
-                     </div>
-                     <button className=' bg-[#515FCE] block max-w-max  px-8 py-3  rounded text-white mt-6'>Buy Course</button>
 
-                 </div>
+
 
             </div>
-
-
-            
-
-        </div>
         </div>
 
     );
