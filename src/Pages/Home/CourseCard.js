@@ -1,9 +1,20 @@
 import { compareAsc } from 'date-fns';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { GrStar } from 'react-icons/gr'
+import { useNavigate } from 'react-router-dom';
 
 const CourseCard = ({ course }) => {
+
+    // console.log(course);
     const [style, setStyle] = useState({ display: 'none' });
+
+    const navigate = useNavigate()
+    const courseDetail = id => {
+        navigate(`/course/${id}`)
+    }
+
+
+
     return (
         <div>
             {/* Card Start --------------------------------- */}
@@ -43,7 +54,7 @@ const CourseCard = ({ course }) => {
                     </div>
 
                 </div>
-                <button className='text-xl w-[150px] h-[45px] font-bold absolute top-0 bottom-0 my-auto z-50 left-0 right-0 mx-auto rounded-md bg-orange-500 text-white overlay' style={style} >VIEW COURSE</button>
+                <button onClick={() => courseDetail(course?._id)} className='text-xl w-[150px] h-[45px] font-bold absolute top-0 bottom-0 my-auto z-50 left-0 right-0 mx-auto rounded-md bg-orange-500 text-white overlay' style={style} >VIEW COURSE</button>
 
 
 
