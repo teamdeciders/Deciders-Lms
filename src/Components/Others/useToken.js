@@ -14,7 +14,7 @@ const useToken = (user) => {
             userType: 'student',
 
         }
-        console.log(user);
+        
 
         if (email) {
             fetch(`http://localhost:5000/user/${email}`, {
@@ -26,7 +26,7 @@ const useToken = (user) => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
+             
                     const accessToken = data.token
                     localStorage.setItem('accessToken', accessToken)
                     setToken(accessToken)

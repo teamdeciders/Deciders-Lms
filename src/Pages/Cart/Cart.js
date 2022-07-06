@@ -1,129 +1,66 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { ImStarFull } from 'react-icons/im'
+import { Link } from 'react-router-dom';
+import auth from '../../Firebase.init';
 import useCourseData from '../../Hooks/useCourseData';
+import useMyCartData from '../../Hooks/useMyCartData';
+import Loading from '../Loading/Loading';
+import CartCard from './CartCard';
 
-const Cart = (id) => {
-    // const [course, setCourse] = useState({})
-    // console.log(course);
 
-    // useEffect(() => {
-    //     const url = `http://localhost:5000/course/${id}`
-    //     fetch(url)
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             setCourse(data)
-    //         })
-    // }, [id])
+const Cart = () => {
+    let prices = []
+    const [user] = useAuthState(auth)
+    const [myCart] = useMyCartData(user?.email)
+    myCart.map(data => prices.push(Number(data.coursePrice)))
+    console.log(prices);
+    let subtotal = prices.reduce((previusValue, currentValue) => previusValue + currentValue, 0)
+    let VAT = ((5 / 100) * subtotal).toFixed(2)
+    let Total = Number(subtotal) + Number(VAT)
+
 
     return (
-        <div className=' mx-8 mt-6'>
-            <div className='flex justify-between' >
-                <div><h1 className='text-4xl font-bold font-sans text-[#a435f0] mt-8 hidden md:block'>Shopping Cart</h1></div>
-
-                <div className='md:w-[320px] w-full px-4 mt-6 shadow-md rounded'>
-                    <h1 className='text-2xl font-sans '>price :</h1>
-                    <p className='text-4xl font-bold mt-2'>$2500</p>
-                    <button className='bg-[#a435f0] px-8 py-3 w-full  mt-4 rounded-md font-medium text-white mb-3'>Checkout</button>
-                </div>
+        <div>
+            <div className='  bg-[#FDFCF6] w-full  pt-10 pb-10'>
+                <h2 className='text-center md:text-3xl font-bold text-2xl '>My Cart : {myCart.length}</h2>
 
             </div>
+            <div className='lg:max-w-7xl md-w-full  mx-auto px-4  md:px-12 mt-6 '>
+                <div className="md:flex gap-6 ">
+                    <div className='md:w-[70%] '>
 
-
-
-
-            <div>
-                <div className='md:flex gap-10 border rounded md:w-3/4 w-full p-2 mt-10'>
-
-                    <div className='md:flex gap-2 '>
-                        <div>
-                            <img className='md:h-24 md:w-36 p-1 rounded-sm' src="https://i.ibb.co/W0G0dPm/56-Bicycle-Maintenance-Course.jpg" alt="" />
-                        </div>
-
-                        <div>
-                            <h1 className='md:text-2xl font-serif'>Ultimate Photography Bundle</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, impedit.</p>
-                            <div className='flex items-center gap-2 mt-2'>
-                                <p className='text-yellow-600'>4.6</p>
-                                <span className='flex gap-1'>
-                                    <ImStarFull className='text-yellow-600' />
-                                    <ImStarFull className='text-yellow-600' />
-                                    <ImStarFull className='text-yellow-600' />
-                                    <ImStarFull className='text-yellow-600' />
-                                    <ImStarFull className='text-yellow-600' />
-
-                                </span>
-                                <p className='text-gray-600 font-thin'>(4378 ratting)</p>
-                            </div>
-                            <span className='flex items-center gap-1 mt-1 min-w-max'>
-                                <p className='text-gray-600 font-mono text-xs'> 41.5 total hours .</p>
-                                <p className='text-gray-600 font-mono text-xs'> 207 lectures .</p>
-                                <p className='text-gray-600 font-mono text-xs'> Beginner</p>
-                            </span>
-                        </div>
+                        {
+                            myCart.map(product => <CartCard key={product._id} data={product} />)
+                        }
 
 
                     </div>
+                    <div className='md:w-[30%] shadow p-2 max-h-72'>
+                        <div className='mb-6'><h1 className='text-3xl font-extralight'>Summary</h1>
+                            <hr /></div>
+                        <div className='flex justify-between' >
+                            <h1 className='text-xl font-bold  font-mono'>Subtotal</h1>
+                            <p className='text-xl font-extrabold text-gray-800'>৳ {subtotal}</p>
+                        </div>
+                        <hr className='mb-6' />
+                        <div className='flex justify-between' >
+                            <h1 className='text-xl font-bold font-mono'>VAT</h1>
+                            <p className='text-xl font-extrabold text-gray-800 ' title='VAT is 5% of Subtotal'>৳ {VAT}</p>
+                        </div>
+                        <hr className='mb-6' />
+                        <div className='flex justify-between' >
+                            <h1 className='text-xl font-bold  font-mono'>Total</h1>
+                            <p className='text-xl font-extrabold text-gray-800'>৳ {Total}</p>
+                        </div>
+                        <hr className='mb-6' />
 
-                    <div className='md:flex md:gap-8 flex justify-between '>
-                        <div className='font-sans text-[#a435f0] cursor-pointer'>
-                            <p>Remove</p>
-                            <p>Save me later</p>
-                        </div>
-                        <div className='font-sans font-semibold text-[#a435f0]'>
-                            <p>Total price</p>
-                            <p>$2500</p>
-                        </div>
+                        <Link to={'/checkout'} className='w-full py-3 rounded-md text-center block font-bold bg-blue-700 text-white'>Proceed to Checkout</Link>
                     </div>
                 </div>
 
-            </div>
-            <div>
-                <div className='md:flex gap-10 border rounded md:w-3/4 w-full p-2 mt-10'>
-
-                    <div className='md:flex gap-2 '>
-                        <div>
-                            <img className='md:h-24 md:w-36 p-1 rounded-sm' src="https://i.ibb.co/W0G0dPm/56-Bicycle-Maintenance-Course.jpg" alt="" />
-                        </div>
-
-                        <div>
-                            <h1 className='md:text-2xl font-serif'>Ultimate Photography Bundle</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, impedit.</p>
-                            <div className='flex items-center gap-2 mt-2'>
-                                <p className='text-yellow-600'>4.6</p>
-                                <span className='flex gap-1'>
-                                    <ImStarFull className='text-yellow-600' />
-                                    <ImStarFull className='text-yellow-600' />
-                                    <ImStarFull className='text-yellow-600' />
-                                    <ImStarFull className='text-yellow-600' />
-                                    <ImStarFull className='text-yellow-600' />
-
-                                </span>
-                                <p className='text-gray-600 font-thin'>(4378 ratting)</p>
-                            </div>
-                            <span className='flex items-center gap-1 mt-1 min-w-max'>
-                                <p className='text-gray-600 font-mono text-xs'> 41.5 total hours .</p>
-                                <p className='text-gray-600 font-mono text-xs'> 207 lectures .</p>
-                                <p className='text-gray-600 font-mono text-xs'> Beginner</p>
-                            </span>
-                        </div>
-
-
-                    </div>
-
-                    <div className='md:flex md:gap-8 flex justify-between '>
-                        <div className='font-sans text-[#a435f0] cursor-pointer'>
-                            <p>Remove</p>
-                            <p>Save me later</p>
-                        </div>
-                        <div className='font-sans font-semibold text-[#a435f0]'>
-                            <p>Total price</p>
-                            <p>$2500</p>
-                        </div>
-                    </div>
-                </div>
 
             </div>
-
         </div>
     );
 };

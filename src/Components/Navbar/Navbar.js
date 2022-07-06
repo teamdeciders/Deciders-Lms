@@ -6,6 +6,7 @@ import { BsCartCheck } from 'react-icons/bs';
 import auth from '../../Firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
+import useMyCartData from '../../Hooks/useMyCartData';
 
 const Navbar = () => {
 
@@ -17,7 +18,7 @@ const Navbar = () => {
         signOut(auth)
     }
 
-
+    const [myCart] = useMyCartData(user?.email)
     return (
         <div className='bg-[#FDFCF6]'>
             <nav className='md:px-24 px-4 lg:max-w-7xl  md-w-full mx-auto  sticky top-0 z-10 '>
@@ -37,11 +38,11 @@ const Navbar = () => {
                                 <Link to={'/'} className='text-gray-800 hover:text-gray-400 duration-500'>Home</Link>
                             </li>
 
-                        
+
                             <li className='md:ml-8 text-xl md:my-0 my-7'>
                                 <Link to={'/courses'} className='text-gray-800 hover:text-gray-400 duration-500'>Courses</Link>
                             </li>
-                           
+
                             <li className='md:ml-8 text-xl md:my-0 my-7'>
                                 <Link to={'/teach'} className='text-gray-800 hover:text-gray-400 duration-500'>Teach</Link>
                             </li>
@@ -51,10 +52,13 @@ const Navbar = () => {
                             <li className='md:ml-8 text-xl md:my-0 my-7'>
                                 <Link to={'/dashboard'} className='text-gray-800 hover:text-gray-400 duration-500'>Dashboard</Link>
                             </li>
-                            <li className='md:ml-8 text-xl md:my-0 my-7'>
-                                <Link to={'/checkout'} className='text-gray-800 hover:text-gray-400 duration-500'>
+                            <li className='md:ml-8 text-xl md:my-0 my-7 block '>
+                                <span className=' w-5 h-5 rounded-full bg-green-600 text-white flex justify-center  items-center ml-4 absolute -mt-2 text-sm'>{myCart.length}</span>
+                                <Link to={'/cart'} className='text-gray-800 hover:text-gray-400 duration-500 '>
                                     <BsCartCheck></BsCartCheck>
+
                                 </Link>
+
                             </li>
 
                             {user ? <li className='md:ml-8 text-xl md:my-0 my-7'><button onClick={handleSingOut} className='hover:text-[#1826a8] duration-500 border-2 rounded border-[#6776e6] text-[#6776e6] px-8 py-2'>Singout</button></li> :

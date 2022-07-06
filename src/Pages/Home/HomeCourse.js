@@ -10,10 +10,11 @@ const HomeCourse = () => {
     if (isLoading) {
         return <Loading />
     }
+
     return (
         <div className='lg:max-w-7xl md-w-full  mx-auto px-4  md:px-16 mt-6'>
             <div className='flex flex-wrap gap-6 lg:gap-12 justify-center items-center'>
-               
+
 
                 {
                     courses.map(course =>

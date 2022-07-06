@@ -51,7 +51,7 @@ function App() {
         <Route path={'/blog'} element={<Blog />}></Route>
         <Route path={'/teach'} element={<Teach />}></Route>
         <Route path={'/contact'} element={<RequireAuth><ContactUs /></RequireAuth>}></Route>
-        <Route path={'/checkout'} element={<RequireAuth><CheckoutPage /></RequireAuth>}></Route>
+        <Route path={'/checkout'} element={<CheckoutPage />}></Route>
         <Route path={'/login'} element={<Login />}></Route>
         <Route path={'/singup'} element={<SignUp />}></Route>
         <Route path={'/resetpassword'} element={<ResetPassword />}></Route>
