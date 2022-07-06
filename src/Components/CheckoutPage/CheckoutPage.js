@@ -9,22 +9,7 @@ import auth from '../../Firebase.init';
 
 const CheckoutPage = () => {
     const [user] = useAuthState(auth)
-
-    const [count, setCount] = useState(1)
-
-    const isIncrease = () => {
-        setCount(count + 1)
-    }
-
-    const isDecrease = () => {
-        if (count === 1) {
-            return
-        }
-        else {
-            return setCount(count - 1)
-        }
-    }
-
+    let prices = []
     //  load my cart
     // 
     const { data: myAllCart, isLoading, refetch } = useQuery('myAllCart', () => fetch(`http://localhost:5000/myallcart/${user?.email}`).then(res => res.json()));
@@ -33,56 +18,77 @@ const CheckoutPage = () => {
         return <Loading />
     }
 
+    myAllCart.map(data => prices.push(Number(data.coursePrice)))
+    console.log(prices);
+    let subtotal = prices.reduce((previusValue, currentValue) => previusValue + currentValue, 0)
+    let VAT = ((5 / 100) * subtotal).toFixed(2)
+    let Total = Number(subtotal) + Number(VAT)
+
     return (
         <div>
+            <div className='  bg-[#FDFCF6] w-full  pt-10 pb-10'>
+                <h2 className='text-center md:text-3xl font-bold text-2xl '>Checkout</h2>
 
 
-            <div className='bg-[#F6F7FD] px-5 md:px-24 py-16'>
-                <div className='px-6 md:px-14 lg:max-w-7xl md-w-full mx-auto min-h-[60vh] h-auto'>
-                    <p className='text-[#515FCE] font-semibold md:my-8'>আপনার ফাইলে 2 টি কোর্স যোগ করেছেন।</p>
-
-                    <div className='bg-[#979FE2] p-5 rounded grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative my-2'>
-                        <img className='rounded w-80' src={card} alt="" />
-                        <div>
-                            <AiFillCloseCircle className='absolute top-0 right-0 md:top-2 md:right-3  text-white text-lg' />
-                            <div className='text-2xl text-white font-medium'>ফাইন্যান্স এবং ইনভেস্টমেন্ট সিরিজ:</div>
-                            <div className='text-white font-medium'>গ্রাফিক্স ডিজাইন</div>
-                            <div className='text-white font-medium text-xl mt-10 md:mt-28'>৳ ২৫০০</div>
-                        </div>
-                        <div className='md:text-end text-center'>
-                            <div className='flex justify-center md:justify-end md:mt-40 md:w-60'>
-                                <p onClick={isDecrease} className='border px-5 py-2 rounded-l text-[#32323266] font-bold text-xl bg-white cursor-pointer'>-</p>
-                                <p className='border px-5 py-2 bg-white text-[#515FCE] font-bold'>{count}</p>
-                                <p onClick={isIncrease} className='border px-5 py-2 rounded-r text-[#CEC051] font-bold text-xl bg-white cursor-pointer'>+</p>
+            </div>
+            <div className='lg:max-w-7xl md-w-full  mx-auto px-4  md:px-12 mt-6 '>
+                <div className="md:flex gap-6  ">
+                    <div className='md:w-[70%] '>
+                        <form >
+                            <p className='text-2xl'>Billing Details</p>
+                            <label className='text-mono'>Your Name</label>
+                            <input type="text" className='py-3 px-3 border border-[#515FCE] rounded w-full mb-4' placeholder='Your Full Name' defaultValue={user?.displayName} />
+                            <label className='text-mono'>Your Email</label>
+                            <input type="text" className='py-3 px-3 border border-[#515FCE] rounded w-full mb-4' placeholder='Your Email' defaultValue={user?.email} disabled />
+                            <label className='text-mono'>Phone Number (optional)</label>
+                            <input type="text" className='py-3 px-3 border border-[#515FCE] rounded w-full mb-4' placeholder='Your Phone' />
+                            <p className='text-2xl '>Additional information</p>
+                            <textarea className=' p-2 h-[96px] border border-[#515FCE] rounded w-full mb-4' name="" id="" ></textarea>
+                            <p className='text-2xl '>Your Order</p>
+                            <div className='w-full flex justify-between mt-4'>
+                                <h2 className='font-bold text-[#FE5D03]'>Product</h2>
+                                <h2 className='font-bold text-[#FE5D03]'>Subtotal</h2>
                             </div>
-                        </div>
+                            <hr />
+                            {
+                                myAllCart.map(product =>
+                                    <>
+                                        <div key={product._id} className='w-full flex justify-between mt-4'>
+                                            <h2 className='font-bold text-gray-700'>{product.courseName}</h2>
+                                            <h2 className='font-bold text-gray-700'>৳ {product.coursePrice} BDT</h2>
+                                        </div>
+                                        <hr /></>
+                                )
+                            }
+
+                            <div className='w-full flex justify-between mt-4'>
+                                <h2 className='font-bold text-[#FE5D03]'>Subtotal</h2>
+                                <h2 className='font-bold text-[#FE5D03]'>৳ {subtotal} BDT</h2>
+                            </div>
+                            <hr />
+                            <div className='w-full flex justify-between mt-4'>
+                                <h2 className='font-bold text-[#FE5D03]'>VAT</h2>
+                                <h2 className='font-bold text-[#FE5D03]'>৳ {VAT} BDT</h2>
+                            </div>
+                            <hr />
+                            <div className='w-full flex justify-between mt-4'>
+                                <h2 className='font-bold text-[#FE5D03]'>Total</h2>
+                                <h2 className='font-bold text-[#FE5D03]'>৳ {Total} BDT</h2>
+                            </div>
+                            <button className='my-4 w-full bg-[#FE5D03] py-3 text-xl font-bold text-white rounded-md' type='submit'>Place Order</button>
+                        </form>
+
                     </div>
-
-
-
-
-                    <div className='md:w-2/4 w-full  mt-12'>
-                        <h1 className='text-3xl font-bold mb-8'>বিস্তারিত :</h1>
-                        <div className='flex justify-between'>
-                            <p>মোট কোর্স</p>
-                            <p> ৪ টি</p>
+                    <div className='md:w-[30%]  '>
+                        <div>
+                            <img className='mx-auto' src="https://www.oneeducation.org.uk/wp-content/uploads/2021/11/side-checkout-2.jpg" alt="" />
                         </div>
-                        <div className='flex justify-between mt-5 mb-2'>
-                            <p>কোর্স মূল্য</p>
-                            <p> 10,000 টাকা</p>
+                        <div>
+                            <img className='mx-auto' src="https://www.oneeducation.org.uk/wp-content/uploads/2021/11/side-checkout-1.jpg" alt="" />
                         </div>
-                        <hr />
-                        <div className='flex justify-between mt-3'>
-                            <p>মোট মূল্য</p>
-                            <p> 10,000 টাকা</p>
-                        </div>
-                        <button className=' bg-[#515FCE] block max-w-max  px-8 py-3  rounded text-white mt-6'>Buy Course</button>
 
                     </div>
-
                 </div>
-
-
 
 
             </div>

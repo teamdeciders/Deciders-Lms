@@ -21,10 +21,6 @@ const UseAdmin = (user) => {
                         setAdmin(true)
                         setAdminLoading(false)
                     }
-                    else {
-                        console.log('This user not an admin');
-                    }
-
 
                 })
         }
