@@ -6,6 +6,7 @@ import Loading from '../../Pages/Loading/Loading';
 import { useQuery } from 'react-query';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase.init';
+import { Helmet } from 'react-helmet-async';
 
 const CheckoutPage = () => {
     const [user] = useAuthState(auth)
@@ -13,19 +14,20 @@ const CheckoutPage = () => {
     //  load my cart
     // 
     const { data: myAllCart, isLoading, refetch } = useQuery('myAllCart', () => fetch(`http://localhost:5000/myallcart/${user?.email}`).then(res => res.json()));
-    console.log(myAllCart);
     if (isLoading) {
         return <Loading />
     }
 
     myAllCart.map(data => prices.push(Number(data.coursePrice)))
-    console.log(prices);
     let subtotal = prices.reduce((previusValue, currentValue) => previusValue + currentValue, 0)
     let VAT = ((5 / 100) * subtotal).toFixed(2)
     let Total = Number(subtotal) + Number(VAT)
 
     return (
         <div>
+            <Helmet>
+                <title>Checkout - Deciders LMS</title>
+            </Helmet>
             <div className='  bg-[#FDFCF6] w-full  pt-10 pb-10'>
                 <h2 className='text-center md:text-3xl font-bold text-2xl '>Checkout</h2>
 
@@ -75,7 +77,7 @@ const CheckoutPage = () => {
                                 <h2 className='font-bold text-[#FE5D03]'>Total</h2>
                                 <h2 className='font-bold text-[#FE5D03]'>৳ {Total} BDT</h2>
                             </div>
-                            <button className='my-4 w-full bg-[#FE5D03] py-3 text-xl font-bold text-white rounded-md' type='submit'>Place Order</button>
+                            <button className='my-4 w-full bg-[#FE5D03] py-3 text-xl font-bold text-white rounded-md' type='submit' disabled={Total <= 0}>Place Order</button>
                         </form>
 
                     </div>

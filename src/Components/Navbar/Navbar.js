@@ -7,17 +7,16 @@ import auth from '../../Firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
 import useMyCartData from '../../Hooks/useMyCartData';
+import UseAdmin from '../Others/UseAdmin';
 
 const Navbar = () => {
-
     const [open, setOpen] = useState(false)
-
     // singout
     const [user] = useAuthState(auth)
     const handleSingOut = () => {
         signOut(auth)
     }
-
+    const [admin] = UseAdmin(user)
     const [myCart] = useMyCartData(user?.email)
     return (
         <div className='bg-[#FDFCF6]'>
@@ -52,15 +51,16 @@ const Navbar = () => {
                             <li className='md:ml-8 text-xl md:my-0 my-7'>
                                 <Link to={'/dashboard'} className='text-gray-800 hover:text-gray-400 duration-500'>Dashboard</Link>
                             </li>
-                            <li className='md:ml-8 text-xl md:my-0 my-7 block '>
-                                <span className=' w-5 h-5 rounded-full bg-green-600 text-white flex justify-center  items-center ml-4 absolute -mt-2 text-sm'>{myCart.length}</span>
-                                <Link to={'/cart'} className='text-gray-800 hover:text-gray-400 duration-500 '>
-                                    <BsCartCheck></BsCartCheck>
+                           <li className='md:ml-8 text-xl md:my-0 my-7 block '>
+                                    <span className=' w-5 h-5 rounded-full bg-green-600 text-white flex justify-center  items-center ml-4 absolute -mt-2 text-sm'>{myCart.length}</span>
+                                    <Link to={'/cart'} className='text-gray-800 hover:text-gray-400 duration-500 '>
+                                        <BsCartCheck></BsCartCheck>
 
-                                </Link>
+                                    </Link>
 
-                            </li>
+                                </li>
 
+                            
                             {user ? <li className='md:ml-8 text-xl md:my-0 my-7'><button onClick={handleSingOut} className='hover:text-[#1826a8] duration-500 border-2 rounded border-[#6776e6] text-[#6776e6] px-8 py-2'>Singout</button></li> :
                                 <li className='md:ml-8 text-2xl md:my-0 my-7'>
                                     <Link to={'/login'} className='hover:text-[#1826a8] duration-500 border-2 rounded border-[#6776e6] text-[#6776e6] px-8'>Login</Link>

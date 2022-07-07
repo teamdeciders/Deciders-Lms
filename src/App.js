@@ -50,12 +50,12 @@ function App() {
         <Route path={'/courses'} element={<Courses />}></Route>
         <Route path={'/blog'} element={<Blog />}></Route>
         <Route path={'/teach'} element={<Teach />}></Route>
-        <Route path={'/contact'} element={<RequireAuth><ContactUs /></RequireAuth>}></Route>
+        <Route path={'/contact'} element={<ContactUs />}></Route>
         <Route path={'/checkout'} element={<CheckoutPage />}></Route>
         <Route path={'/login'} element={<Login />}></Route>
         <Route path={'/singup'} element={<SignUp />}></Route>
         <Route path={'/resetpassword'} element={<ResetPassword />}></Route>
-        <Route path={'/cart'} element={<Cart />}></Route>
+        <Route path={'/cart'} element={<RequireAuth><Cart /></RequireAuth>}></Route>
 
 
         <Route path={'/course/:id'} element={<SingleCourse />}>

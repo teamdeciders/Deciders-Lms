@@ -11,6 +11,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../Firebase.init';
 import UseAdmin from '../Components/Others/UseAdmin';
 import Loading from '../Pages/Loading/Loading';
+
 const Dashboard = () => {
   const [user] = useAuthState(auth)
   const [admin] = UseAdmin(user)
@@ -21,6 +22,7 @@ const Dashboard = () => {
   const { name, img } = profiledata[0]
   return (
     <div className=''>
+     
       <div className='  bg-[#FDFCF6] w-full '>
         <div className='lg:max-w-7xl md-w-full  mx-auto px-4  md:px-12 '>
           <div className=" mx-auto md:w-[375px] py-8">

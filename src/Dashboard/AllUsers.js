@@ -1,6 +1,8 @@
 import { useQuery } from 'react-query';
 import Loading from '../Pages/Loading/Loading';
 import Swal from 'sweetalert2'
+import { Helmet } from 'react-helmet-async';
+
 const AllUsers = () => {
     const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/users').then(res => res.json()));
     if (isLoading) {
@@ -133,6 +135,9 @@ const AllUsers = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>All Users - Deciders LMS</title>
+            </Helmet>
             <div className='border-b-2 border-slate-100 mb-4'>
                 <h1 className='text-2xl font-bold text-center'>All Users</h1>
             </div>

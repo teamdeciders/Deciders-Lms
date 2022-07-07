@@ -8,6 +8,7 @@ import auth from '../../Firebase.init';
 import { useForm } from 'react-hook-form';
 import Loading from '../Loading/Loading';
 import useToken from '../../Components/Others/useToken';
+import { Helmet } from 'react-helmet-async';
 
 
 const Login = () => {
@@ -38,12 +39,15 @@ const Login = () => {
    }
 
    if (token) {
-  
+
       navigate(from, { replace: true });
    }
 
    return (
       <div className='lg:flex justify-center mt-12'>
+         <Helmet>
+            <title>Login - Deciders LMS</title>
+         </Helmet>
          <div className='hidden lg:block'>
             <img src="https://lh3.googleusercontent.com/BLPgeHnmm_jXD9odvEPr6y3-9tBKwfgOXEk7ysvnIPcCbCJ4WtCTfHnvgzqV-fHHrSJhx-ixjfwa2nVpy6TnnX28ErUNU3UtTg=w911" alt="" />
          </div>

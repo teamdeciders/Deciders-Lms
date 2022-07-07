@@ -3,6 +3,7 @@ import { AiOutlineCopy, AiOutlineDelete, AiOutlineEdit, AiOutlineEye } from 'rea
 import { useQuery } from 'react-query';
 import Loading from '../Pages/Loading/Loading';
 import Swal from 'sweetalert2'
+import { Helmet } from 'react-helmet-async';
 
 const AllTeachers = () => {
     const { data: allteachers, isLoading, refetch } = useQuery('allteachers', () => fetch('http://localhost:5000/allteachers').then(res => res.json()));
@@ -56,7 +57,10 @@ const AllTeachers = () => {
 
 
     return (
-        <div>
+        <div> 
+            <Helmet>
+        <title>All Teachers - Deciders LMS</title>
+      </Helmet>
             <div className='border-b-2 border-slate-100 mb-4'>
                 <h1 className='text-2xl font-bold text-center'>All Teacher's</h1>
             </div>

@@ -1,20 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
-import { GrStar } from 'react-icons/gr';
 import { GoSearch } from 'react-icons/go';
-import { Link } from 'react-router-dom';
 import CourseCard from '../Home/CourseCard';
-import { useQuery } from 'react-query'
+import { Helmet } from 'react-helmet-async';
+
+import { useQuery } from 'react-query';
 import Loading from '../Loading/Loading';
+import { useEffect } from 'react';
 
 
 const Courses = () => {
-    const { data: courses, isLoading, refetch } = useQuery('courses', () => fetch('http://localhost:5000/allcourses').then(res => res.json()));
-    if (isLoading) {
-        return <Loading />
-    }
-    const leftscroll = () => {
+    const [courses, setCourse] = useState([])
+    const [searchResult, setSearchResult] = useState(courses)
+    useEffect(() => {
+        
+    }, [])
+    
 
+    const leftscroll = () => {
         const div = document.getElementById('mainscroll')
         div.scrollLeft -= 70
 
@@ -25,8 +28,18 @@ const Courses = () => {
         div.scrollLeft += 70
 
     }
+    const handleSearch = event => {
+        let searchTest = event.target.value.toLowerCase();
+        const match = courses.filter(course => course.title.toLowerCase().includes(searchTest))
+        setSearchResult(match)
+
+    }
+
     return (
         <div>
+            <Helmet>
+                <title>All Courses - Deciders LMS</title>
+            </Helmet>
             <div className=' h-[30vh]  bg-[#FDFCF6] w-full'>
                 <div className='lg:max-w-7xl md-w-full  mx-auto px-4  md:px-16 '>
                     <h1 className='text-4xl font-bold text-center pt-20'>All Courses</h1>
@@ -144,17 +157,20 @@ const Courses = () => {
                                 <button type="submit" className="absolute top-0 right-0 p-2.5 text-sm font-medium bg-white shadow-lg rounded-r-lg border">
                                     <GoSearch className='h-5 w-5 ' />
                                 </button>
-                                <input className='block p-2.5 w-full z-20 text-sm bg-white border shadow-sm rounded-md  required' type="search" name="" id="" />
+                                <input onChange={handleSearch} className='block p-2.5 w-full z-20 text-sm bg-white border shadow-sm rounded-md  required' type="search" placeholder='Search Courses..' />
                             </div>
 
 
                         </div>
-                        <div className='flex flex-wrap gap-6 lg:gap-12  items-center'>
+                        <div className='flex flex-wrap justify-center gap-8 lg:gap-12  items-center mt-6'>
                             {
-                                courses.map(course =>
+                                searchResult?.map(course =>
                                     <CourseCard key={course._id} course={course} />
                                 )
                             }
+                        </div>
+                        <div className='py-4 w-full my-4 flex justify-center items-center'>
+
                         </div>
 
 

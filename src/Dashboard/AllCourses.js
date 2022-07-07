@@ -4,6 +4,8 @@ import { useQuery } from 'react-query';
 import Swal from 'sweetalert2';
 import Loading from '../Pages/Loading/Loading';
 import EditeCourseModal from './EditeCourseModal'
+import { Helmet } from 'react-helmet-async';
+
 const AllCourses = () => {
     const [showModal, setShowModal] = React.useState(false);
     const [coursedata, setCoursedata] = useState({})
@@ -74,6 +76,9 @@ const AllCourses = () => {
 
     return (
         <div>
+             <Helmet>
+        <title>All Course - Deciders LMS</title>
+      </Helmet>
             <div className='border-b-2 mb-4'>
                 <h1 className='text-2xl font-bold text-center'>All Courses : {courses.length}</h1>
             </div>

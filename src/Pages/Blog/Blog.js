@@ -1,9 +1,12 @@
 import React from 'react';
-import LatestBlogs from '../Home/LatestBlogs';
+import { Helmet } from 'react-helmet-async';
 
 const Blog = () => {
     return (
         <div>
+            <Helmet>
+                <title>Blogs - Deciders LMS</title>
+            </Helmet>
             <div className=' h-[30vh]  bg-[#FDFCF6] w-full '>
                 <div className='lg:max-w-7xl md-w-full  mx-auto px-4  md:px-12 '>
                     <h1 className='text-4xl font-bold text-center pt-20'>Our Blogs</h1>

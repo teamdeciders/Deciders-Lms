@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import useCourseData from '../../Hooks/useCourseData';
+import { Helmet } from 'react-helmet-async';
 
 const Review = () => {
     const { id } = useParams()
@@ -8,6 +9,9 @@ const Review = () => {
     const { reviews } = course
     return (
         <div className='p-2'>
+            <Helmet>
+                <title>Add A Review - Deciders LMS</title>
+            </Helmet>
             <div className='grid md:grid-cols-2 gap-5 rounded-md'>
 
 

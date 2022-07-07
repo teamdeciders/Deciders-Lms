@@ -8,6 +8,7 @@ import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfil
 import { useForm } from 'react-hook-form';
 import Loading from '../Loading/Loading';
 import useToken from '../../Components/Others/useToken';
+import { Helmet } from 'react-helmet-async';
 
 const SignUp = () => {
    const [showPassword, setShowPassword] = useState(false)
@@ -57,6 +58,9 @@ const SignUp = () => {
 
    return (
       <div className='lg:flex justify-center mt-12'>
+         <Helmet>
+            <title>Register - Deciders LMS</title>
+         </Helmet>
          <div className='hidden lg:block'>
             <img src="https://cdna.artstation.com/p/assets/images/images/027/682/158/original/liz-gross-signup.gif?1592246526" alt="" />
          </div>
