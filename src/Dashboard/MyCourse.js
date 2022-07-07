@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const MyCourse = () => {
     let mycourses = [
@@ -25,6 +26,9 @@ const MyCourse = () => {
     ]
     return (
         <div >
+            <Helmet>
+                <title>My Course - Deciders LMS</title>
+            </Helmet>
             {/* card */}
             <div className=' mx-auto h-6 my-4 max-w-max px-3 rounded-full bg-blue-600 flex justify-center text-white font-bold'>
                 {mycourses.length} Courses

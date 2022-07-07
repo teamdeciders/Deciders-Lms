@@ -6,10 +6,14 @@ import { TiContacts } from "react-icons/ti";
 import { RiFacebookCircleLine } from "react-icons/ri";
 import { FiTwitter } from "react-icons/fi";
 import { BsInstagram } from "react-icons/bs";
+import { Helmet } from 'react-helmet-async';
 
 const ContactUs = () => {
     return (
         <div>
+            <Helmet>
+                <title>Contact Us - Deciders LMS</title>
+            </Helmet>
             <div className=' border  bg-[#FDFCF6] w-full  pt-10'>
                 <div className='lg:max-w-7xl md-w-full  mx-auto px-4  md:px-12 '>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-9 items-center mx-auto'>

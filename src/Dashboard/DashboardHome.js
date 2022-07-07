@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
 import UseAdmin from '../Components/Others/UseAdmin';
 import auth from '../Firebase.init';
 import Loading from '../Pages/Loading/Loading';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -36,6 +37,9 @@ const DashboardHome = () => {
     }
     return (
         <div >
+            <Helmet>
+                <title>Dashboard - Deciders LMS</title>
+            </Helmet>
             <div className='flex justify-center md:gap-10  gap-6 flex-col md:flex-row '>
                 <div className='cs-round border  rounded-md shadow-md relative  w-full h-[380px]  md:max-w-md'>
                     <div className='bg-[#FC8B06] cs-round h-4 rounded-md absulate top-0  z-10'></div>
@@ -53,7 +57,7 @@ const DashboardHome = () => {
                                     <div className='w-[70%]'>
                                         <div>{offer.offerTitle.slice(0, 25)}...</div>
                                         <div className=' '> 10 min ago</div>
-                                    
+
                                     </div>
                                 </div>)
                             }

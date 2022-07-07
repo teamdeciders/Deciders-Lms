@@ -2,6 +2,7 @@ import { AiOutlineDelete, } from 'react-icons/ai';
 import { useQuery } from 'react-query';
 import Loading from '../Pages/Loading/Loading';
 import Swal from 'sweetalert2'
+import { Helmet } from 'react-helmet-async';
 
 const AllStudents = () => {
 
@@ -58,6 +59,9 @@ const AllStudents = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>All Students - Deciders LMS</title>
+            </Helmet>
             <div className='border-b-2 border-slate-100 mb-4'>
                 <h1 className='text-2xl font-bold text-center'>All Student's</h1>
             </div>

@@ -5,6 +5,8 @@ import { useQuery } from 'react-query';
 import Swal from 'sweetalert2';
 import Loading from '../Pages/Loading/Loading';
 import LessonaddModal from './LessonaddModal';
+import { Helmet } from 'react-helmet-async';
+
 const AllLessons = () => {
     const [showModal, setShowModal] = React.useState(false);
     const [lessondata, setLessondata] = useState({})
@@ -30,7 +32,6 @@ const AllLessons = () => {
                     method: 'DELETE',
                     headers: {
                         'content-type': 'application/json',
-                        // authorization: `Bearer ${localStorage.getItem('accessToken')}`
                     }
                 })
                     .then(res => res.json())
@@ -83,6 +84,9 @@ const AllLessons = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>All Lessons - Deciders LMS</title>
+            </Helmet>
             <div className='border-b-2 mb-4'>
                 <h1 className='text-2xl font-bold text-center'>All Lessons</h1>
             </div>

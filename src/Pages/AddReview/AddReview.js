@@ -1,9 +1,13 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const AddReview = ({ img }) => {
     console.log(img);
     return (
         <div>
+            <Helmet>
+                <title>Add A Reviews - Deciders LMS</title>
+            </Helmet>
             <div className='border-b-2 border-slate-100 mb-4'>
                 <h1 className='text-2xl font-bold text-center'>Add Review</h1>
             </div>

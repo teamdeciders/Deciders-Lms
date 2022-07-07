@@ -5,6 +5,8 @@ import Swal from 'sweetalert2'
 import auth from '../Firebase.init';
 import { useQuery } from 'react-query';
 import Loading from '../Pages/Loading/Loading';
+import { Helmet } from 'react-helmet-async';
+
 const MyProfile = () => {
     const [active, setActive] = useState(false)
     const imageStoreKey = '16abc4ff06472ec2149292101479d701'
@@ -75,6 +77,9 @@ const MyProfile = () => {
     const { email, name, _id, phone, address, img } = profiledata[0]
     return (
         <section>
+            <Helmet>
+                <title>My Profile - Deciders LMS</title>
+            </Helmet>
             <div className='flex justify-between md:px-3'>
                 <h2 className='text-3xl font-bold'>My Profile</h2>
                 <p className='text-blue-600 font-bold cursor-pointer' onClick={() => setActive(!active)}>Edit</p>

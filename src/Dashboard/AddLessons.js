@@ -3,6 +3,8 @@ import JoditEditor from "jodit-react";
 import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
 const AddLessons = () => {
     const editor = useRef(null)
     const [content, setContent] = useState('')
@@ -35,6 +37,9 @@ const AddLessons = () => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
+             <Helmet>
+        <title>Add A Lesson - Deciders LMS</title>
+      </Helmet>
             <div>
                 <div className='border-b-2 border-slate-100 mb-4'>
                     <h1 className='text-2xl font-bold text-center'>Add Lessons</h1>

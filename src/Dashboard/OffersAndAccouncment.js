@@ -1,5 +1,6 @@
 import React from 'react';
 import Swal from 'sweetalert2'
+import { Helmet } from 'react-helmet-async';
 
 const OffersAndAccouncment = () => {
     const addOffers = (e) => {
@@ -48,6 +49,9 @@ const OffersAndAccouncment = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Add Offers - Deciders LMS</title>
+            </Helmet>
             <div className='border-b-2 border-slate-100 mb-4'>
                 <h1 className='text-2xl font-bold text-center'>Offers And Accouncment</h1>
             </div>

@@ -13,7 +13,7 @@ const useMyCartData = (email) => {
             .then(data => {
                 setmyCart(data)
             })
-    }, [email])
+    }, [email, myCart])
 
     return [myCart]
 

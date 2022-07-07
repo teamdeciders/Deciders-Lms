@@ -7,6 +7,7 @@ import useCourseData from '../../Hooks/useCourseData';
 import useMyCartData from '../../Hooks/useMyCartData';
 import Loading from '../Loading/Loading';
 import CartCard from './CartCard';
+import { Helmet } from 'react-helmet-async';
 
 
 const Cart = () => {
@@ -22,12 +23,21 @@ const Cart = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Cart - Deciders LMS</title>
+            </Helmet>
             <div className='  bg-[#FDFCF6] w-full  pt-10 pb-10'>
                 <h2 className='text-center md:text-3xl font-bold text-2xl '>My Cart : {myCart.length}</h2>
 
             </div>
             <div className='lg:max-w-7xl md-w-full  mx-auto px-4  md:px-12 mt-6 '>
+                {
+                    myCart.length <= 0 && <div className="p-5 border w-full mb-2">
+                        <h2 className='text-red-500 text-xl'><span className=' text-2xl'>X</span> Your Cart is Emty ! <Link className='text-blue-500' to='/courses'>Continue Shopping.</Link> </h2>
+                    </div>
+                }
                 <div className="md:flex gap-6 ">
+
                     <div className='md:w-[70%] '>
 
                         {
@@ -55,7 +65,7 @@ const Cart = () => {
                         </div>
                         <hr className='mb-6' />
 
-                        <Link to={'/checkout'} className='w-full py-3 rounded-md text-center block font-bold bg-blue-700 text-white'>Proceed to Checkout</Link>
+                        <Link to={'/checkout'} className={`w-full  py-3 rounded-md text-center block font-bold bg-blue-700 text-white ${Total <= 0 && 'pointer-events-none'}`} >Proceed to Checkout</Link>
                     </div>
                 </div>
 

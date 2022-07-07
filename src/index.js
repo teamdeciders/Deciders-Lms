@@ -11,17 +11,20 @@ import {
   QueryClient,
   QueryClientProvider,
 } from 'react-query'
+import { HelmetProvider } from 'react-helmet-async';
 const queryClient = new QueryClient()
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <QueryClientProvider client={queryClient}>
-    <React.StrictMode>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </React.StrictMode>
-  </QueryClientProvider>
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <React.StrictMode>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </React.StrictMode>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

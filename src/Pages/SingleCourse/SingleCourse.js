@@ -10,6 +10,8 @@ import useCourseData from '../../Hooks/useCourseData';
 import Swal from 'sweetalert2'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase.init';
+import { Helmet } from 'react-helmet-async';
+
 const SingleCourse = () => {
     const [user] = useAuthState(auth)
     const { id } = useParams()
@@ -71,6 +73,9 @@ const SingleCourse = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>{`${title}`} - Deciders LMS</title>
+            </Helmet>
             <div className=' h-[30vh]  bg-[#FDFCF6] w-full '>
                 <div className='lg:max-w-7xl md-w-full  mx-auto px-4  md:px-12 '>
                     <h1 className='text-3xl font-bold text-center pt-12'>Course Details</h1>
@@ -81,7 +86,7 @@ const SingleCourse = () => {
                 <div className='lg:max-w-7xl md-w-full  mt-4 mx-auto px-4  md:px-16 '>
                     <div className='md:flex'>
                         <div className=' text-left md:w-[700px] w-full  '>
-                            <img className='block w-full md:w-[700px] md:h-[380px]' src={image} alt="" />
+                            <img className='block w-full md:w-[700px] md:h-[380px] border' src={image} alt="" />
                             <div className='mt-2 '>
                                 <h1 className='text-2xl font-bold  pt-5'>{title}</h1>
                                 <div className='p-2 w-full flex gap-4 '>

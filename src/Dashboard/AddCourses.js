@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../Firebase.init';
+import { Helmet } from 'react-helmet-async';
 
 const AddCourses = () => {
     const [user] = useAuthState(auth)
@@ -71,6 +72,9 @@ const AddCourses = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Add A Course - Deciders LMS</title>
+            </Helmet>
             <div className='border-b-2 border-slate-100 mb-4'>
                 <h1 className='text-2xl font-bold text-center'>Add Course</h1>
             </div>

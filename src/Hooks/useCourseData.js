@@ -13,7 +13,7 @@ const useCourseData = (id) => {
             .then(data => {
                 setCourse(data)
             })
-    }, [id])
+    }, [id, course])
 
     return [course]
 

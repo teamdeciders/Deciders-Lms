@@ -1,10 +1,14 @@
 import React from 'react';
 import { BiPhoneCall } from 'react-icons/bi';
 import { AiOutlineMail } from 'react-icons/ai';
+import { Helmet } from 'react-helmet-async';
 
 const Teach = () => {
     return (
         <section className=''>
+            <Helmet>
+                <title>Tech - Deciders LMS</title>
+            </Helmet>
             <div className='w-full  bg-[#FDFCF6] '>
                 <div className='px-6 md:px-14 lg:max-w-7xl md-w-full mx-auto min-h-max h-auto '>
                     <div className='flex  flex-row-reverse '>

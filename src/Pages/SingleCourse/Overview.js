@@ -15,9 +15,9 @@ const Overview = () => {
 
 
     return (
-        <div className='w-full p-2 min-h-max '>
-            <div id='overview'>
-
+        <div className='w-full p-2 min-h-max max-w-[100%] '>
+            <div>
+                <p id='overview' ></p>
             </div>
 
         </div>
